@@ -1,0 +1,26 @@
+{
+  "name": "nuxt-admin-module",
+  "version": "0.0.1",
+  "description": "",
+  "main": "lib/module.js",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "dev": "nuxt example",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/getsedona/nuxt-admin-module.git"
+  },
+  "author": "Ivan Kalinichenko <kalinichenko@constlab.ru>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/getsedona/nuxt-admin-module/issues"
+  },
+  "homepage": "https://github.com/getsedona/nuxt-admin-module#readme",
+  "devDependencies": {
+    "nuxt": "^2.6.1"
+  }
+}
