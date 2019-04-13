@@ -8,7 +8,8 @@
   ],
   "scripts": {
     "dev": "nuxt example",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node build/build.stylus.js"
   },
   "repository": {
     "type": "git",
@@ -20,7 +21,15 @@
     "url": "https://github.com/getsedona/nuxt-admin-module/issues"
   },
   "homepage": "https://github.com/getsedona/nuxt-admin-module#readme",
+  "dependencies": {
+    "quasar": "^1.0.0-beta.16"
+  },
   "devDependencies": {
-    "nuxt": "^2.6.1"
+    "autoprefixer": "^9.5.1",
+    "nuxt": "^2.6.1",
+    "postcss": "^7.0.14",
+    "postcss-csscomb": "^1.0.2",
+    "postcss-csso": "^3.0.0",
+    "stylus": "^0.54.5"
   }
 }

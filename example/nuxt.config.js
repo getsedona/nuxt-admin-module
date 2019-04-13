@@ -8,5 +8,9 @@ export default {
         testKey: "testParamValue"
       }
     ]
-  ]
+  ],
+
+  build: {
+    extractCSS: true,
+  }
 };
