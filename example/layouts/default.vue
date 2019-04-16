@@ -1,22 +1,23 @@
 <template>
-    <div>
-        <main style="padding-left:350px">
-            <nuxt />
-        </main>
+  <div>
+    <main style="padding-left:350px">
+      <nuxt />
+    </main>
 
-        <no-ssr>
-             <admin-panel />
-        </no-ssr>
-    </div>
+    <no-ssr>
+      <admin-panel />
+    </no-ssr>
+  </div>
 </template>
 
 <script>
-    import AdminPanel from "../../lib/components/admin-panel";
+  // @ToDo change import to alias
+  import AdminPanel from '../../lib/components/admin-panel'
 
-    export default {
-        name: "DefaultLayout",
-        components: {
-            AdminPanel,
-        },
-    };
+  export default {
+    name: 'DefaultLayout',
+    components: {
+      AdminPanel,
+    },
+  }
 </script>
