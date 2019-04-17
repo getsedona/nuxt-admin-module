@@ -40,7 +40,9 @@
     "eslint-plugin-unicorn": "^8.0.2",
     "eslint-plugin-vue": "^5.2.2",
     "nuxt": "^2.6.2",
+    "postcss": "7.0.14",
     "postcss-csso": "^3.0.0",
+    "postcss-prefixwrap": "git+https://github.com/constlab/postcss-prefixwrap.git",
     "stylus": "^0.54.5"
   }
 }
