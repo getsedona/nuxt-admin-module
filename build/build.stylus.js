@@ -16,7 +16,24 @@ function generateFiles() {
   const code = fs.readFileSync(styleIndex).toString('utf-8')
   return compileStylus(code)
     .then((code) =>
-      postcss([prefixwrap('.admin-panel', { prefixRootTags: false, ignoredSelectors: [':root', /\.desktop(.+)/] })]).process(code, {
+      postcss([
+        prefixwrap('.admin-panel', {
+          prefixRootTags: false,
+          ignoredSelectors: [
+            ':root',
+            /\.desktop(.+)/,
+            /\.mobile(.+)/,
+            /\.cordova(.+)/,
+            /\.electron(.+)/,
+            /\.ios(.+)/,
+            /\.mat(.+)/,
+            /\.touch(.+)/,
+            /\.within-iframe(.+)/,
+            /\.platform-ios(.+)/,
+            /\.platform-android(.+)/,
+          ],
+        }),
+      ]).process(code, {
         from: void 0,
       })
     )
@@ -32,7 +49,6 @@ function compileStylus(code) {
   return new Promise((resolve, reject) => {
     stylus(code)
       .set('paths', pathList)
-      // .set('prefix', 'admin-panel .')
       .render((error, code) => {
         if (error) {
           console.log(error.message)

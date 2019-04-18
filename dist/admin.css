@@ -1,7 +1,3 @@
-.admin-panel #q-app {
-  width: 100%;
-  direction: ltr;
-}
 .admin-panel .q-icon {
   line-height: 1;
   width: 1em;
@@ -21,7 +17,7 @@
   align-items: center;
   justify-content: center;
 }
-.admin-panel .q-icon, .admin-panel .material-icons {
+.admin-panel .q-icon, .material-icons {
   user-select: none;
   cursor: inherit;
   font-size: inherit;
@@ -2397,7 +2393,7 @@ body.desktop .q-chip--clickable:focus {
 .admin-panel .q-textarea.q-field--dense.q-field--labeled .q-field__prefix, .admin-panel .q-textarea.q-field--dense.q-field--labeled .q-field__suffix {
   padding-top: 2px;
 }
-.admin-panel.mobile .q-textarea .q-field__native, .admin-panel .q-textarea.disabled .q-field__native {
+body.mobile .q-textarea .q-field__native, .admin-panel .q-textarea.disabled .q-field__native {
   resize: none;
 }
 .admin-panel .q-knob {
@@ -4194,10 +4190,10 @@ body.desktop .q-radio--dense:focus:not(.disabled) .q-radio__inner:before {
 .admin-panel .q-tabs--dense .q-tab--full {
   min-height: 52px;
 }
-.admin-panel.mobile .q-tabs__content {
+body.mobile .q-tabs__content {
   overflow: auto;
 }
-.admin-panel.mobile .q-tabs__arrow {
+body.mobile .q-tabs__arrow {
   display: none;
 }
 @media (min-width: 1440px) {
@@ -8188,11 +8184,11 @@ body.desktop .q-toggle:focus:not(.disabled) .q-toggle__thumb:before {
   outline: 0;
   text-decoration: none;
 }
-.admin-panel.electron .q-electron-drag {
+body.electron .q-electron-drag {
   -webkit-user-select: none;
   -webkit-app-region: drag;
 }
-.admin-panel.electron .q-electron-drag .q-btn, .admin-panel.electron .q-electron-drag--exception {
+body.electron .q-electron-drag .q-btn, body.electron .q-electron-drag--exception {
   -webkit-app-region: no-drag;
 }
 .admin-panel .non-selectable {
@@ -8956,31 +8952,31 @@ body.desktop .q-toggle:focus:not(.disabled) .q-toggle__thumb:before {
 body:not(.desktop) .desktop-only, body.desktop .desktop-hide {
   display: none !important;
 }
-.admin-panel:not(.mobile) .mobile-only, .admin-panel.mobile .mobile-hide {
+body:not(.mobile) .mobile-only, body.mobile .mobile-hide {
   display: none !important;
 }
-.admin-panel:not(.cordova) .cordova-only, .admin-panel.cordova .cordova-hide {
+body:not(.cordova) .cordova-only, body.cordova .cordova-hide {
   display: none !important;
 }
-.admin-panel:not(.electron) .electron-only, .admin-panel.electron .electron-hide {
+body:not(.electron) .electron-only, body.electron .electron-hide {
   display: none !important;
 }
-.admin-panel:not(.ios) .ios-only, .admin-panel.ios .ios-hide {
+body:not(.ios) .ios-only, body.ios .ios-hide {
   display: none !important;
 }
-.admin-panel:not(.mat) .mat-only, .admin-panel.mat .mat-hide {
+body:not(.mat) .mat-only, body.mat .mat-hide {
   display: none !important;
 }
-.admin-panel:not(.touch) .touch-only, .admin-panel.touch .touch-hide {
+body:not(.touch) .touch-only, body.touch .touch-hide {
   display: none !important;
 }
-.admin-panel:not(.within-iframe) .within-iframe-only, .admin-panel.within-iframe .within-iframe-hide {
+body:not(.within-iframe) .within-iframe-only, body.within-iframe .within-iframe-hide {
   display: none !important;
 }
-.admin-panel:not(.platform-ios) .platform-ios-only, .admin-panel.platform-ios .platform-ios-hide {
+body:not(.platform-ios) .platform-ios-only, body.platform-ios .platform-ios-hide {
   display: none !important;
 }
-.admin-panel:not(.platform-android) .platform-android-only, .admin-panel.platform-android .platform-android-hide {
+body:not(.platform-android) .platform-android-only, body.platform-android .platform-android-hide {
   display: none !important;
 }
 @media all and (orientation: portrait) {
@@ -9088,4 +9084,5 @@ body.desktop .q-focusable:focus > .q-focus-helper, body.desktop .q-manual-focusa
   z-index: 99;
   background: #424242;
   font-size: 16px;
+  direction: ltr;
 }
