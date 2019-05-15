@@ -794,6 +794,9 @@ body.desktop .q-checkbox:focus:not(.disabled) .q-checkbox__inner:before {
 body.desktop .q-checkbox--dense:focus:not(.disabled) .q-checkbox__inner:before {
   transform: scale3d(2, 2, 2);
 }
+body.desktop .q-checkbox .q-table--dense .q-checkbox--dense:focus:not(.disabled) .q-checkbox__inner:before {
+  transform: scale3d(1.4, 1.4, 1.4);
+}
 .admin-panel .q-chip {
   vertical-align: middle;
   border-radius: 16px;
@@ -1704,6 +1707,14 @@ body.desktop .q-chip--clickable:focus {
   pointer-events: all;
   background: rgba(0,0,0,0.4);
 }
+.admin-panel.q-ios-padding .q-dialog__inner {
+  padding-top: 20px !important;
+  padding-top: env(safe-area-inset-top) !important;
+  padding-bottom: env(safe-area-inset-bottom) !important;
+}
+.admin-panel.q-ios-padding .q-dialog__inner > div {
+  max-height: calc(100vh - env(safe-area-inset-top) - env(safe-area-inset-bottom)) !important;
+}
 @media (max-width: 599px) {
   .admin-panel .q-dialog__inner--minimized {
     padding: 16px;
@@ -2563,18 +2574,15 @@ body.mobile .q-textarea .q-field__native, .admin-panel .q-textarea.disabled .q-f
   display: inline-block;
   pointer-events: auto;
 }
-.admin-panel.q-ios-statusbar-padding .q-layout .q-header > .q-toolbar:nth-child(2), .admin-panel.q-ios-statusbar-padding .q-layout .q-header > .q-tabs:nth-child(2) .q-tabs-head, .admin-panel.q-ios-statusbar-padding .q-layout .q-drawer--top-padding, .admin-panel.q-ios-statusbar-padding .modal:not(.minimized) .q-header > .q-toolbar:nth-child(1) {
+.admin-panel.q-ios-padding .q-layout--standard .q-header > .q-toolbar:nth-child(2), .admin-panel.q-ios-padding .q-layout--standard .q-header > .q-tabs:nth-child(2) .q-tabs-head, .admin-panel.q-ios-padding .q-layout--standard .q-drawer--top-padding .q-drawer__content {
   padding-top: 20px;
   min-height: 70px;
-}
-.admin-panel.q-ios-statusbar-x .q-layout .q-header > .q-toolbar:nth-child(2), .admin-panel.q-ios-statusbar-x .q-layout .q-header > .q-tabs:nth-child(2) .q-tabs-head, .admin-panel.q-ios-statusbar-x .q-layout .q-drawer--top-padding, .admin-panel.q-ios-statusbar-x .modal:not(.minimized) .q-header > .q-toolbar:nth-child(1) {
-  padding-top: constant(safe-area-inset-top);
   padding-top: env(safe-area-inset-top);
+  min-height: calc(env(safe-area-inset-top) + 50px);
 }
-.admin-panel.q-ios-statusbar-x .q-layout .q-footer > .q-toolbar:last-child, .admin-panel.q-ios-statusbar-x .q-layout .q-footer > .q-tabs:last-child .q-tabs-head, .admin-panel.q-ios-statusbar-x .q-layout .q-drawer--top-padding, .admin-panel.q-ios-statusbar-x .modal:not(.minimized) .q-footer > .q-toolbar:last-child {
-  padding-bottom: constant(safe-area-inset-bottom);
+.admin-panel.q-ios-padding .q-layout--standard .q-footer > .q-toolbar:last-child, .admin-panel.q-ios-padding .q-layout--standard .q-footer > .q-tabs:last-child .q-tabs-head, .admin-panel.q-ios-padding .q-layout--standard .q-drawer--top-padding .q-drawer__content {
   padding-bottom: env(safe-area-inset-bottom);
-  min-height: 70px;
+  min-height: calc(env(safe-area-inset-bottom) + 50px);
 }
 .admin-panel .q-body--layout-animate .q-layout__section--animate {
   transition: all 0.12s ease-in !important;
@@ -2938,7 +2946,7 @@ body.mobile .q-textarea .q-field__native, .admin-panel .q-textarea.disabled .q-f
   overflow-x: hidden;
   outline: 0;
   max-height: 65vh;
-  z-index: 8000;
+  z-index: 6000;
 }
 .admin-panel .q-menu--square {
   border-radius: 0;
@@ -2973,6 +2981,15 @@ body.mobile .q-textarea .q-field__native, .admin-panel .q-textarea.disabled .q-f
   min-width: 100%;
   min-height: 100%;
   will-change: transform;
+}
+.admin-panel .q-popup-edit {
+  padding: 8px 16px;
+}
+.admin-panel .q-popup-edit__buttons {
+  margin-top: 8px;
+}
+.admin-panel .q-popup-edit__buttons .q-btn + .q-btn {
+  margin-left: 8px;
 }
 .admin-panel .q-pull-to-refresh {
   position: relative;
@@ -4922,12 +4939,11 @@ body.desktop .q-toggle:focus:not(.disabled) .q-toggle__thumb:before {
 .admin-panel .q-notifications__list--bottom {
   bottom: 0;
 }
-.admin-panel.q-ios-statusbar-x .q-notifications__list--center, .admin-panel.q-ios-statusbar-x .q-notifications__list--top {
-  top: constant(safe-area-inset-top);
+.admin-panel.q-ios-padding .q-notifications__list--center, .admin-panel.q-ios-padding .q-notifications__list--top {
+  top: 20px;
   top: env(safe-area-inset-top);
 }
-.admin-panel.q-ios-statusbar-x .q-notifications__list--center, .admin-panel.q-ios-statusbar-x .q-notifications__list--bottom {
-  bottom: constant(safe-area-inset-bottom);
+.admin-panel.q-ios-padding .q-notifications__list--center, .admin-panel.q-ios-padding .q-notifications__list--bottom {
   bottom: env(safe-area-inset-bottom);
 }
 .admin-panel .q-notification {
@@ -9083,6 +9099,6 @@ body.desktop .q-focusable:focus > .q-focus-helper, body.desktop .q-manual-focusa
   bottom: 0;
   z-index: 99;
   background: #424242;
-  font-size: 16px;
+  font-size: 15px;
   direction: ltr;
 }
