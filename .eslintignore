@@ -5,3 +5,6 @@ dist
 
 # Examples
 example/.nuxt/
+
+# Plugin
+lib/plugin.js
