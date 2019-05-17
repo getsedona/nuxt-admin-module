@@ -1,5 +1,5 @@
 <template>
-  <div id="q-app" class="admin-panel">
+  <div class="admin-panel">
     <div class="admin-panel--inner text-white q-gutter-y-sm shadow-5">
       <q-scroll-area class="fit">
         <div class="row self-stretch">
@@ -14,27 +14,7 @@
               <q-icon name="menu" />
             </q-btn>
           </q-toolbar>
-          <q-list padding dark class="full-width">
-            <q-item v-ripple clickable>
-              <q-item-section avatar>
-                <q-icon name="list" />
-              </q-item-section>
-
-              <q-item-section>
-                Posts
-              </q-item-section>
-            </q-item>
-
-            <q-item v-ripple clickable>
-              <q-item-section avatar>
-                <q-icon name="inbox" />
-              </q-item-section>
-
-              <q-item-section>
-                SEO
-              </q-item-section>
-            </q-item>
-          </q-list>
+          <admin-router-view />
         </div>
       </q-scroll-area>
     </div>
@@ -42,7 +22,12 @@
 </template>
 
 <script>
+  import AdminRouterView from './admin-router-view'
+
   export default {
     name: 'AdminPanel',
+    components: {
+      AdminRouterView,
+    },
   }
 </script>

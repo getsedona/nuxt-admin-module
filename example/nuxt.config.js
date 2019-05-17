@@ -5,7 +5,29 @@ export default {
     [
       NuxtAdminModule,
       {
-        testKey: 'testParamValue',
+        menuItems: [
+          {
+            title: 'Edit',
+            subtitle: 'Edit current post',
+            icon: 'edit',
+            component: '',
+            section: 'context',
+          },
+          {
+            title: 'Edit',
+            subtitle: 'Edit current post',
+            icon: 'edit',
+            component: '',
+            section: 'context',
+          },
+          {
+            // title: 'Edit',
+            // subtitle: 'Edit current post',
+            // icon: 'peoples',
+            component: '',
+            section: 'general',
+          },
+        ],
       },
     ],
   ],
