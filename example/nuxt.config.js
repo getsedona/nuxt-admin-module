@@ -8,21 +8,21 @@ export default {
         menuItems: [
           {
             title: 'Edit',
-            subtitle: 'Edit current post',
+            subTitle: 'Edit current post',
             icon: 'edit',
             component: '~admin/components/posts-list',
             section: 'context',
           },
           {
             title: 'Edit',
-            subtitle: 'Edit current post',
+            subTitle: 'Edit current post',
             icon: 'edit',
             component: '~admin/components/posts-list',
             section: 'context',
           },
           {
             // title: 'Edit',
-            // subtitle: 'Edit current post',
+            // subTitle: 'Edit current post',
             // icon: 'peoples',
             component: '~admin/components/posts-list',
             section: 'general',
