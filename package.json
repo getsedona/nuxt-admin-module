@@ -2,7 +2,7 @@
   "name": "nuxt-admin-module",
   "version": "0.0.1",
   "description": "",
-  "main": "lib/module.js",
+  "main": "lib/index.js",
   "files": [
     "lib"
   ],
