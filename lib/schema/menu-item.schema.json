@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": ["title", "component"],
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Menu Item Title",
+      "minLength": 1
+    },
+    "subTitle": {
+      "type": "string",
+      "description": "Menu Item Sub Title"
+    },
+    "icon": {
+      "type": "string",
+      "description": "Icon name from Material Icons"
+    },
+    "component": {
+      "type": "string",
+      "description": "Menu Item Component"
+    },
+    "section": {
+      "type": "string",
+      "description": "Menu Item Section"
+    }
+  }
+}

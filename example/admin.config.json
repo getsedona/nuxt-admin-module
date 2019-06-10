@@ -1,0 +1,9 @@
+{
+  "title": "Example",
+  "menuItems": [
+    {
+      "title": "First",
+      "component": "path-to-component"
+    }
+  ]
+}

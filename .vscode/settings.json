@@ -10,5 +10,11 @@
     ],
     "javascript.preferences.quoteStyle": "single",
     "prettier.stylelintIntegration": true,
-    "prettier.eslintIntegration": true
+    "prettier.eslintIntegration": true,
+    "json.schemas": [
+      {
+        "fileMatch": ["admin.config.json"],
+        "url": "./lib/schema/admin.config.schema.json"
+      }
+    ]
 }
