@@ -1,30 +1,30 @@
-import NuxtAdminModule from '..'
+import { resolve } from 'path'
 
 export default {
   modules: [
     [
-      NuxtAdminModule,
+      '../lib/index.js',
       {
         menuItems: [
           {
             title: 'Edit',
             subTitle: 'Edit current post',
             icon: 'edit',
-            component: '~/admin/components/posts-list',
+            component: resolve(__dirname, 'admin/components/posts-list'),
             section: 'context',
           },
           {
             title: 'Edit',
             subTitle: 'Edit current post',
             icon: 'edit',
-            component: '~/admin/components/posts-list',
+            component: '@@/example/admin/components/posts-list',
             section: 'context',
           },
           {
             // title: 'Edit',
             // subTitle: 'Edit current post',
             // icon: 'peoples',
-            component: '~/admin/components/posts-list',
+            component: '@@/example/admin/components/posts-list',
             section: 'general',
           },
         ],
