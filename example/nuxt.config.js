@@ -1,16 +1,14 @@
-import { resolve } from 'path'
-
 export default {
   modules: [
     [
-      '../lib/index.js',
+      '../lib',
       {
         menuItems: [
           {
             title: 'Edit',
             subTitle: 'Edit current post',
             icon: 'edit',
-            component: resolve(__dirname, 'admin/components/posts-list'),
+            // component: resolve(__dirname, 'admin/components/posts-list'),
             section: 'context',
           },
           {
