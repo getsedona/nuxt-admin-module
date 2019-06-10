@@ -12,7 +12,7 @@
 
 <script>
   // @ToDo change import to alias
-  import AdminPanel from '../../lib/components/admin-panel'
+  import { AdminPanel } from './../..'
 
   export default {
     name: 'DefaultLayout',
