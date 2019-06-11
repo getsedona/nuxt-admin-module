@@ -3,6 +3,7 @@
   "items": [
     {
       "title": "Post List",
+      "subTitle": "Post list Subtitle",
       "type": "item",
       "component": "path-to-component"
     },
@@ -12,6 +13,7 @@
       "items": [
         {
           "title": "Edit Post",
+          "icon": "edit",
           "type": "item",
           "component": "path-to-component"
         },
