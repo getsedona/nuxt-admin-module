@@ -2,31 +2,6 @@ export default {
   modules: [
     [
       '../lib/module',
-      {
-        menuItems: [
-          {
-            title: 'Edit',
-            subTitle: 'Edit current post',
-            icon: 'edit',
-            // component: resolve(__dirname, 'admin/components/posts-list'),
-            section: 'context',
-          },
-          {
-            title: 'Edit',
-            subTitle: 'Edit current post',
-            icon: 'edit',
-            component: '@@/example/admin/components/posts-list',
-            section: 'context',
-          },
-          {
-            // title: 'Edit',
-            // subTitle: 'Edit current post',
-            // icon: 'peoples',
-            component: '@@/example/admin/components/posts-list',
-            section: 'general',
-          },
-        ],
-      },
     ],
   ],
 

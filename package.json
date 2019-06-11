@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/getsedona/nuxt-admin-module#readme",
   "dependencies": {
+    "ajv": "^6.10.0",
     "lodash": "^4.17.11",
     "quasar": "^1.0.0-rc.4"
   },
