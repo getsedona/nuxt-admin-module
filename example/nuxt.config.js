@@ -1,7 +1,7 @@
 export default {
   modules: [
     [
-      '../lib',
+      '../lib/module',
       {
         menuItems: [
           {
@@ -32,16 +32,18 @@ export default {
 
   build: {
     extend(config, { isDev, isClient }) {
-      if (isDev && isClient) {
-        config.module.rules.push({
-          enforce: 'pre',
-          test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
-          exclude: /(node_modules)/,
-        })
-      }
       if (isDev) {
-        config.devtool = isClient ? 'source-map' : 'inline-source-map'
+        if (isClient) {
+          config.module.rules.push({
+            enforce: 'pre',
+            test: /\.(js|vue)$/,
+            loader: 'eslint-loader',
+            exclude: /(node_modules)/,
+          })
+          config.devtool = 'source-map'
+        } else {
+          config.devtool = 'inline-source-map'
+        }
       }
     },
   },
