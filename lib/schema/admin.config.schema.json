@@ -1,15 +1,19 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
-  "required": ["title"],
+  "required": [
+    "title"
+  ],
   "properties": {
     "title": {
       "type": "string",
-      "description": "Admin Panel Title"
+      "description": "Admin Panel Title",
+      "default": "Admin"
     },
-    "menuItems": {
+    "items": {
       "type": "array",
       "description": "Admin Menu Items",
+      "default": [],
       "items": {
         "$ref": "./menu-item.schema.json"
       }

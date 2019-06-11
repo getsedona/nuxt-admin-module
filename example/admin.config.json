@@ -1,9 +1,26 @@
 {
-  "title": "Example",
-  "menuItems": [
+  "title": "Admin",
+  "items": [
     {
-      "title": "First",
+      "title": "Post List",
+      "type": "item",
       "component": "path-to-component"
+    },
+    {
+      "title": "Post",
+      "type": "section",
+      "items": [
+        {
+          "title": "Edit Post",
+          "type": "item",
+          "component": "path-to-component"
+        },
+        {
+          "title": "SEO",
+          "type": "item",
+          "component": "path-to-component"
+        }
+      ]
     }
   ]
 }
