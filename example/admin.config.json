@@ -1,0 +1,28 @@
+{
+  "title": "Admin",
+  "items": [
+    {
+      "title": "Post List",
+      "subTitle": "Post list Subtitle",
+      "type": "item",
+      "component": "path-to-component"
+    },
+    {
+      "title": "Post",
+      "type": "section",
+      "items": [
+        {
+          "title": "Edit Post",
+          "icon": "edit",
+          "type": "item",
+          "component": "path-to-component"
+        },
+        {
+          "title": "SEO",
+          "type": "item",
+          "component": "path-to-component"
+        }
+      ]
+    }
+  ]
+}
