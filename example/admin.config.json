@@ -19,8 +19,19 @@
         },
         {
           "title": "SEO",
-          "type": "item",
-          "component": "path-to-component"
+          "type": "section",
+          "items": [
+            {
+              "title": "Meta Tags",
+              "type": "item",
+              "component": "path-to-component"
+            },
+            {
+              "title": "Social Networks",
+              "type": "item",
+              "component": "path-to-component"
+            }
+          ]
         }
       ]
     }
