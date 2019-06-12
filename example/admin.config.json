@@ -5,7 +5,7 @@
       "title": "Post List",
       "subTitle": "Post list Subtitle",
       "type": "item",
-      "component": "path-to-component"
+      "component": "components/posts-list"
     },
     {
       "title": "Post",
