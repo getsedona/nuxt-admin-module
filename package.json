@@ -8,7 +8,7 @@
   ],
   "scripts": {
     "dev": "nuxt example",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"Error: no test specified\"",
     "build": "node build/build.stylus.js",
     "lint": "eslint --ext .js,.vue --ignore-pattern lib/plugin.template.js --ignore-path .gitignore .",
     "lint:fix": "eslint --fix --ext .js,.vue  --ignore-pattern lib/plugin.template.js --ignore-path .gitignore ."
