@@ -5,7 +5,7 @@
       "title": "Post List",
       "subTitle": "Post list Subtitle",
       "type": "item",
-      "component": "path-to-component"
+      "component": "components/posts-list"
     },
     {
       "title": "Post",
@@ -19,8 +19,42 @@
         },
         {
           "title": "SEO",
-          "type": "item",
-          "component": "path-to-component"
+          "type": "section",
+          "items": [
+            {
+              "title": "Meta Tags",
+              "type": "item",
+              "icon": "code",
+              "component": "path-to-component"
+            },
+            {
+              "title": "Social Networks",
+              "type": "section",
+              "items": [
+                {
+                  "title": "Facebook",
+                  "type": "item",
+                  "component": "path-to-compoent"
+                },
+                {
+                  "title": "Twitter",
+                  "type": "item",
+                  "component": "path-to-component"
+                },
+                {
+                  "title": "Instagram",
+                  "type": "section",
+                  "items": [
+                    {
+                      "title": "Photos",
+                      "type": "item",
+                      "component": "path-to-component"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ]
     }
