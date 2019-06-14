@@ -1,3 +1,3 @@
-# nuxt-admin-module
+# Nuxt Admin Module
 
 ## WIP

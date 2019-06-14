@@ -1,2 +1,4 @@
 node_modules/
 example/.nuxt/
+
+.DS_Store

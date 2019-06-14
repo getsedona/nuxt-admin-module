@@ -2,13 +2,16 @@
   "name": "nuxt-admin-module",
   "version": "0.0.1",
   "description": "",
-  "main": "lib/module.js",
+  "main": "lib/index.js",
   "files": [
     "lib"
   ],
   "scripts": {
     "dev": "nuxt example",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node build/build.stylus.js",
+    "lint": "eslint --ext .js,.vue --ignore-pattern lib/plugin.template.js --ignore-path .gitignore .",
+    "lint:fix": "eslint --fix --ext .js,.vue  --ignore-pattern lib/plugin.template.js --ignore-path .gitignore ."
   },
   "repository": {
     "type": "git",
@@ -20,7 +23,29 @@
     "url": "https://github.com/getsedona/nuxt-admin-module/issues"
   },
   "homepage": "https://github.com/getsedona/nuxt-admin-module#readme",
+  "dependencies": {
+    "ajv": "^6.10.0",
+    "lodash": "^4.17.11",
+    "nanoid": "^2.0.3",
+    "quasar": "^1.0.0-rc.4"
+  },
   "devDependencies": {
-    "nuxt": "^2.6.1"
+    "@nuxtjs/eslint-config": "0.0.1",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-loader": "^2.1.2",
+    "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-jest": "^22.6.4",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.1.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-unicorn": "^8.0.2",
+    "eslint-plugin-vue": "^5.2.2",
+    "nuxt": "^2.8.1",
+    "postcss": "7.0.14",
+    "postcss-csso": "^3.0.0",
+    "postcss-prefixwrap": "git+https://github.com/constlab/postcss-prefixwrap.git",
+    "stylus": "^0.54.5"
   }
 }
