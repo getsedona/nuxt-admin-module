@@ -28,8 +28,6 @@ jobs:
 
       - run: npm ci
 
-      - run: npm run build:example
-
       - save_cache:
           paths:
             - node_modules
@@ -37,3 +35,9 @@ jobs:
 
       # run tests!
       - run: npm test
+
+      - run: npm run build:example
+
+      - persist_to_workspace:
+          root: docs
+          paths: docs
