@@ -1,9 +1,5 @@
 export default {
-  modules: [
-    [
-      '../lib/module',
-    ],
-  ],
+  modules: [['../lib/module']],
 
   build: {
     extend(config, { isDev, isClient }) {
@@ -21,5 +17,9 @@ export default {
         }
       }
     },
+  },
+
+  generate: {
+    dir: './../docs',
   },
 }
