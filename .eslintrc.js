@@ -3,91 +3,94 @@ module.exports = {
   env: {
     browser: true,
     es6: true,
-    jest: true
+    jest: true,
   },
   parserOptions: {
     ecmaVersion: 2019,
-    sourceType: "module",
-    parser: "babel-eslint",
+    sourceType: 'module',
+    parser: 'babel-eslint',
   },
   globals: {
     page: true,
     browser: true,
     context: true,
-    jestPuppeteer: true
+    jestPuppeteer: true,
   },
   extends: [
-    "@nuxtjs",
-    "plugin:vue/base",
-    "plugin:vue/essential",
-    "plugin:vue/strongly-recommended",
-    "plugin:vue/recommended",
-    "plugin:unicorn/recommended"
+    'eslint:recommended',
+    '@nuxtjs',
+    'plugin:vue/base',
+    'plugin:vue/essential',
+    'plugin:vue/strongly-recommended',
+    'plugin:vue/recommended',
+    'plugin:unicorn/recommended',
+    'plugin:promise/recommended',
+    'plugin:jsdoc/recommended'
   ],
-  plugins: ["vue", "unicorn"],
+  plugins: ['vue', 'unicorn'],
   rules: {
-    "no-console": process.env.NODE_ENV === "production" ? "error" : "off",
-    "no-debugger": process.env.NODE_ENV === "production" ? "error" : "off",
-    "comma-dangle": [
-      "error",
+    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'comma-dangle': [
+      'error',
       {
-        arrays: "always-multiline",
-        objects: "always-multiline",
-        functions: "never"
-      }
+        arrays: 'always-multiline',
+        objects: 'always-multiline',
+        functions: 'never',
+      },
     ],
-    "arrow-parens": ["error", "always"],
-    semi: ["error", "never"],
+    'arrow-parens': ['error', 'always'],
+    semi: ['error', 'never'],
     indent: [
-      "error",
+      'error',
       2,
       {
         SwitchCase: 1,
         VariableDeclarator: 2,
         outerIIFEBody: 0,
         MemberExpression: 1,
-        FunctionDeclaration: { parameters: "first" },
-        FunctionExpression: { parameters: "first" },
-        CallExpression: { arguments: "first" },
+        FunctionDeclaration: { parameters: 'first' },
+        FunctionExpression: { parameters: 'first' },
+        CallExpression: { arguments: 'first' },
         ArrayExpression: 1,
         ObjectExpression: 1,
         ImportDeclaration: 1,
-        flatTernaryExpressions: false
-      }
+        flatTernaryExpressions: false,
+      },
     ],
-    "space-before-function-paren": [
-      "error",
+    'space-before-function-paren': [
+      'error',
       {
-        anonymous: "never",
-        named: "never",
-        asyncArrow: "always"
-      }
+        anonymous: 'never',
+        named: 'never',
+        asyncArrow: 'always',
+      },
     ],
-    "unicorn/prevent-abbreviations": [
-      "error",
+    'unicorn/prevent-abbreviations': [
+      'error',
       {
         extendDefaultReplacements: false,
         replacements: {
           e: {
-            event: true
+            event: true,
           },
           er: {
-            error: true
+            error: true,
           },
           err: {
-            error: true
+            error: true,
           },
           warn: {
-            warning: true
-          }
-        }
-      }
-    ]
+            warning: true,
+          },
+        },
+      },
+    ],
   },
   overrides: [
     {
-      files: ["*.vue"],
-      rules: { indent: "off", "vue/script-indent": ["error", 2, { baseIndent: 1 }] }
-    }
-  ]
-};
+      files: ['*.vue'],
+      rules: { indent: 'off', 'vue/script-indent': ['error', 2, { baseIndent: 1 }] },
+    },
+  ],
+}
