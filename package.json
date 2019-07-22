@@ -25,10 +25,10 @@
   },
   "homepage": "https://github.com/getsedona/nuxt-admin-module#readme",
   "dependencies": {
-    "ajv": "^6.10.1",
-    "lodash": "^4.17.14",
+    "ajv": "^6.10.2",
+    "lodash": "^4.17.15",
     "nanoid": "^2.0.3",
-    "quasar": "^1.0.4"
+    "quasar": "^1.0.5"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "0.0.1",
@@ -37,8 +37,8 @@
     "eslint": "^5.16.0",
     "eslint-config-standard": "^12.0.0",
     "eslint-loader": "^2.2.1",
-    "eslint-plugin-import": "^2.18.0",
-    "eslint-plugin-jest": "^22.7.2",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jest": "^22.13.0",
     "eslint-plugin-jsdoc": "^10.3.0",
     "eslint-plugin-node": "^9.1.0",
     "eslint-plugin-promise": "^4.2.1",
