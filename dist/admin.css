@@ -17,7 +17,7 @@
   align-items: center;
   justify-content: center;
 }
-.admin-panel .q-icon, .material-icons {
+.admin-panel .q-icon, .material-icons, .material-icons-outlined, .material-icons-round, .material-icons-sharp {
   user-select: none;
   cursor: inherit;
   font-size: inherit;
@@ -2629,8 +2629,20 @@ body.mobile .q-textarea .q-field__native, .admin-panel .q-textarea.disabled .q-f
   padding-bottom: env(safe-area-inset-bottom);
   min-height: calc(env(safe-area-inset-bottom) + 50px);
 }
-.admin-panel .q-body--layout-animate .q-layout__section--animate {
-  transition: all 0.12s ease-in !important;
+.admin-panel .q-body--layout-animate .q-drawer__backdrop {
+  transition: background-color 0.12s !important;
+}
+.admin-panel .q-body--layout-animate .q-drawer {
+  transition: transform 0.12s, width 0.12s, top 0.12s, bottom 0.12s !important;
+}
+.admin-panel .q-body--layout-animate .q-layout__section--marginal {
+  transition: transform 0.12s, left 0.12s, right 0.12s !important;
+}
+.admin-panel .q-body--layout-animate .q-page-container {
+  transition: padding-top 0.12s, padding-right 0.12s, padding-bottom 0.12s, padding-left 0.12s !important;
+}
+.admin-panel .q-body--layout-animate .q-page-sticky {
+  transition: transform 0.12s, left 0.12s, right 0.12s, top 0.12s, bottom 0.12s !important;
 }
 .admin-panel .q-body--drawer-toggle {
   overflow-x: hidden !important;
@@ -8311,7 +8323,7 @@ body.electron .q-electron-drag .q-btn, body.electron .q-electron-drag--exception
 .admin-panel .no-scroll {
   overflow: hidden !important;
 }
-.admin-panel .no-pointer-events {
+.no-pointer-events {
   pointer-events: none !important;
 }
 .admin-panel .all-pointer-events {
@@ -9190,7 +9202,7 @@ body.desktop .q-focusable:focus > .q-focus-helper, body.desktop .q-manual-focusa
   font-size: 15px;
   direction: ltr;
 }
-.admin-panel .dialog-plugin.admin-panlel {
+.admin-panel .dialog-plugin.admin-panel {
   min-width: auto;
   min-height: auto;
 }

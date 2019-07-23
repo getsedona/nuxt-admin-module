@@ -42,6 +42,7 @@ function generateFiles() {
             /\.q-notifications/,
             /\.q-tooltip/,
             /(\.fullscreen|\.absolute-full|\.fixed-full)/,
+            /\.no-pointer-events/,
           ],
         }),
       ]).process(code, {
