@@ -31,6 +31,7 @@
     "quasar": "^1.0.5"
   },
   "devDependencies": {
+    "@nuxtjs/axios": "^5.5.4",
     "@nuxtjs/eslint-config": "0.0.1",
     "babel-eslint": "^10.0.2",
     "escape-regex-string": "^1.0.6",

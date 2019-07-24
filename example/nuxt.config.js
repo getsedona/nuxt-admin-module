@@ -1,5 +1,5 @@
 export default {
-  modules: [['../lib/module']],
+  modules: [['../lib/module'], '@nuxtjs/axios'],
 
   build: {
     extend(config, { isDev, isClient }) {
