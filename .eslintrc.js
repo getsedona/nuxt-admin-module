@@ -25,7 +25,7 @@ module.exports = {
     'plugin:vue/recommended',
     'plugin:unicorn/recommended',
     'plugin:promise/recommended',
-    'plugin:jsdoc/recommended'
+    'plugin:jsdoc/recommended',
   ],
   plugins: ['vue', 'unicorn'],
   rules: {
@@ -82,6 +82,9 @@ module.exports = {
           },
           warn: {
             warning: true,
+          },
+          val: {
+            value: true,
           },
         },
       },
