@@ -40,4 +40,5 @@ jobs:
 
       - persist_to_workspace:
           root: docs
-          paths: docs
+          paths:
+            - docs
