@@ -12,7 +12,9 @@
     "build": "node build/build.stylus.js",
     "build:example": "nuxt generate example",
     "lint": "eslint --color --ext .js,.vue .",
-    "lint:fix": "eslint --fix --ext .js,.vue"
+    "lint:fix": "eslint --fix --ext .js,.vue",
+    "generate:gh-pages": "DEPLOY_ENV=GH_PAGES nuxt generate example",
+    "deploy:gh-pages": "gh-pages -d docs -m 'chore: update example' -t"
   },
   "repository": {
     "type": "git",
@@ -49,6 +51,7 @@
     "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-unicorn": "^8.0.2",
     "eslint-plugin-vue": "^5.2.3",
+    "gh-pages": "^2.0.1",
     "jest": "^24.8.0",
     "jest-serializer-vue": "^2.0.2",
     "jest-transform-stub": "^2.0.0",

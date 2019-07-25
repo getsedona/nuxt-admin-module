@@ -1,3 +1,5 @@
+const baseRoute = (env) => (env === 'GH_PAGES' ? '/nuxt-admin-module/' : '/')
+
 export default {
   modules: [['../lib/module'], '@nuxtjs/axios'],
 
@@ -17,6 +19,10 @@ export default {
         }
       }
     },
+  },
+
+  router: {
+    base: baseRoute(process.env.DEPLOY_ENV),
   },
 
   generate: {
