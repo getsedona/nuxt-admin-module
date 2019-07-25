@@ -58,7 +58,7 @@
     "nuxt": "^2.8.1",
     "postcss": "7.0.14",
     "postcss-csso": "^3.0.0",
-    "postcss-prefixwrap": "git+https://github.com/constlab/postcss-prefixwrap.git",
+    "postcss-prefixwrap": "^1.6.0",
     "stylus": "^0.54.5",
     "vue-jest": "^3.0.4"
   }
