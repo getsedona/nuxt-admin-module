@@ -1,7 +1,7 @@
 <template>
   <main class="main">
     <the-header />
-    Home page
+    Contacts
   </main>
 </template>
 
@@ -9,7 +9,7 @@
   import TheHeader from '~/components/the-header'
 
   export default {
-    name: 'HomePage',
+    name: 'ContactsPage',
     components: {
       TheHeader,
     },
