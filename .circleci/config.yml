@@ -37,7 +37,3 @@ jobs:
       - run: npm test
 
       - run: npm run build:example
-
-      - persist_to_workspace:
-          root: docs
-          paths: docs

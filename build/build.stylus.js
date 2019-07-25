@@ -8,10 +8,17 @@ const pathList = [path.resolve(__dirname, '../lib/assets/css')]
 const styleIndex = path.resolve(__dirname, '../lib/assets/css/index.styl')
 const styleDist = path.resolve(__dirname, '../dist/admin.css')
 
-generateFiles().then((code) => {
-  fs.writeFileSync(styleDist, code)
-})
+generateFiles()
+  .then((code) => {
+    return fs.writeFileSync(styleDist, code)
+  })
+  .catch((error) => console.log(error))
 
+/**
+ * Compile less with postcss
+ *
+ * @returns {Promise<string>} compilled css code
+ */
 function generateFiles() {
   const code = fs.readFileSync(styleIndex).toString('utf-8')
   return compileStylus(code)
@@ -31,6 +38,11 @@ function generateFiles() {
             /\.within-iframe(.+)/,
             /\.platform-ios(.+)/,
             /\.platform-android(.+)/,
+            /\.q-dialog(.+)/,
+            /\.q-notifications/,
+            /\.q-tooltip/,
+            /(\.fullscreen|\.absolute-full|\.fixed-full)/,
+            /\.no-pointer-events/,
           ],
         }),
       ]).process(code, {
@@ -45,6 +57,12 @@ function generateFiles() {
     })
 }
 
+/**
+ * Compilee less
+ *
+ * @param {string} code less code
+ * @returns {Promise<string>} css code
+ */
 function compileStylus(code) {
   return new Promise((resolve, reject) => {
     stylus(code)
