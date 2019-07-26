@@ -4,8 +4,10 @@
   "description": "",
   "main": "lib/index.js",
   "files": [
-    "lib"
+    "lib",
+    "types/*.d.ts"
   ],
+  "typings": "types/index.d.ts",
   "scripts": {
     "dev": "nuxt example",
     "test": "jest",
