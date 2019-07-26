@@ -4,15 +4,17 @@
   "description": "",
   "main": "lib/index.js",
   "files": [
-    "lib"
+    "lib",
+    "types/*.d.ts"
   ],
+  "typings": "types/index.d.ts",
   "scripts": {
     "dev": "nuxt example",
     "test": "jest",
     "build": "node build/build.stylus.js",
     "build:example": "nuxt generate example",
     "lint": "eslint --color --ext .js,.vue .",
-    "lint:fix": "eslint --fix --ext .js,.vue",
+    "lint:fix": "eslint --fix --ext .js,.vue .",
     "generate:gh-pages": "DEPLOY_ENV=GH_PAGES nuxt generate example",
     "deploy:gh-pages": "gh-pages -d docs -m 'chore: update example' -t"
   },
@@ -36,6 +38,7 @@
     "@babel/core": "^7.5.5",
     "@nuxtjs/axios": "^5.5.4",
     "@nuxtjs/eslint-config": "0.0.1",
+    "@types/jest": "^24.0.15",
     "@vue/test-utils": "^1.0.0-beta.29",
     "babel-eslint": "^10.0.2",
     "babel-jest": "^24.8.0",
@@ -44,7 +47,7 @@
     "eslint-config-standard": "^12.0.0",
     "eslint-loader": "^2.2.1",
     "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-jest": "^22.13.6",
+    "eslint-plugin-jest": "^22.13.7",
     "eslint-plugin-jsdoc": "^10.3.0",
     "eslint-plugin-node": "^9.1.0",
     "eslint-plugin-promise": "^4.2.1",
@@ -55,10 +58,13 @@
     "jest": "^24.8.0",
     "jest-serializer-vue": "^2.0.2",
     "jest-transform-stub": "^2.0.0",
+    "less": "^3.9.0",
+    "less-loader": "^5.0.0",
     "nuxt": "^2.8.1",
     "postcss": "7.0.14",
     "postcss-csso": "^3.0.0",
-    "postcss-prefixwrap": "git+https://github.com/constlab/postcss-prefixwrap.git",
+    "postcss-prefixwrap": "^1.6.0",
+    "sedona-components": "^4.9.4",
     "stylus": "^0.54.5",
     "vue-jest": "^3.0.4"
   }
