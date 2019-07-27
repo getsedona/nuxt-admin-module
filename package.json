@@ -4,10 +4,8 @@
   "description": "",
   "main": "lib/index.js",
   "files": [
-    "lib",
-    "types/*.d.ts"
+    "lib"
   ],
-  "typings": "types/index.d.ts",
   "scripts": {
     "dev": "nuxt example",
     "test": "jest",
@@ -39,6 +37,7 @@
     "@nuxtjs/axios": "^5.5.4",
     "@nuxtjs/eslint-config": "0.0.1",
     "@types/jest": "^24.0.15",
+    "@types/lodash": "^4.14.136",
     "@vue/test-utils": "^1.0.0-beta.29",
     "babel-eslint": "^10.0.2",
     "babel-jest": "^24.8.0",
@@ -47,7 +46,7 @@
     "eslint-config-standard": "^12.0.0",
     "eslint-loader": "^2.2.1",
     "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-jest": "^22.13.7",
+    "eslint-plugin-jest": "^22.14.0",
     "eslint-plugin-jsdoc": "^10.3.0",
     "eslint-plugin-node": "^9.1.0",
     "eslint-plugin-promise": "^4.2.1",
