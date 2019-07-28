@@ -15,6 +15,10 @@
     {
       "fileMatch": ["admin.config.json"],
       "url": "./lib/schema/admin.config.schema.json"
+    },
+    {
+      "fileMatch": ["*.form.json"],
+      "url": "./lib/schema/form.schema.json"
     }
   ],
   "editor.formatOnSave": false

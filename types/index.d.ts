@@ -8,3 +8,5 @@ export interface MenuItem {
   type?: 'item' | 'section'
   items?: MenuItem[]
 }
+
+export type SchemaForm = Component

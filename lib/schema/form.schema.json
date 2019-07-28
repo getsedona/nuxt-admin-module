@@ -1,0 +1,55 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "fields": {
+      "type": "array",
+      "description": "Form fields",
+      "default": [],
+      "items": {
+        "$ref": "#/definitions/field"
+      }
+    }
+  },
+  "definitions": {
+    "field": {
+      "type": "object",
+      "required": [
+        "name",
+        "type"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string",
+          "description": "Field type",
+          "enum": [
+            "text",
+            "textarea",
+            "password",
+            "email",
+            "search",
+            "tel",
+            "file",
+            "number",
+            "url",
+            "time",
+            "date",
+            "color"
+          ],
+          "default": "string"
+        },
+        "label": {
+          "type": "string",
+          "description": "Field label"
+        },
+        "value": {
+          "type": "string",
+          "description": "Field initial value"
+        }
+      }
+    }
+  }
+}
