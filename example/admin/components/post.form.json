@@ -1,0 +1,21 @@
+{
+  "fields": [
+    {
+      "name": "title",
+      "type": "text",
+      "value": "example"
+    },
+    {
+      "name": "body",
+      "type": "textarea"
+    },
+    {
+      "name": "pass",
+      "type": "password"
+    },
+    {
+      "name": "date",
+      "type": "date"
+    }
+  ]
+}
