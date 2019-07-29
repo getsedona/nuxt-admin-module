@@ -7,6 +7,7 @@ export interface MenuItem {
   component?: string | Component
   type?: 'item' | 'section'
   items?: MenuItem[]
+  params?: any // dynamic props for compoennt
 }
 
 export type SchemaForm = Component

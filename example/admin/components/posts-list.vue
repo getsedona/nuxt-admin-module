@@ -7,7 +7,7 @@
       :hide-full-screen="false"
       :title-field-name="(item) => truncateBody(item.body)"
       subtitle-field-name="title"
-      @item-click="onItemClick"
+      @item-click="itemClick"
     />
   </div>
 </template>
@@ -54,12 +54,28 @@
     },
     methods: {
       actionNew() {
-        console.log('action new')
+        this.$admin.goTo({
+          id: 'post-tools',
+          title: 'Create new post',
+          type: 'section',
+          items: [
+            {
+              title: 'Regular Post',
+              icon: 'add',
+              component: 'components/post-view',
+            },
+            {
+              title: 'News Post',
+              icon: 'add',
+              component: 'components/post-view',
+            },
+          ],
+        })
       },
-      onItemClick(item) {
-        console.log('item click', item)
+      itemClick(item) {
+        this.$admin.goTo({ id: 'post-form', title: 'Post edit', component: 'components/post-view' }, { item })
       },
-      truncateBody(body) {
+      truncateBody(body = '') {
         return truncate(body, { length: 40 })
       },
     },
