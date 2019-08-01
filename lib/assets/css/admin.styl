@@ -1,5 +1,7 @@
+$panelWidth = 300px
+
 .admin-panel--inner
-    width: 300px;
+    width: $panelWidth;
     position: fixed;
     left: 0;
     top: 0;
@@ -12,3 +14,10 @@
 .dialog-plugin.admin-panel
     min-width: auto
     min-height: auto
+
+.admin-blocks-palette
+    position: fixed;
+    left: $panelWidth;
+    top: 0;
+    width: $panelWidth;
+    height: 100%;
