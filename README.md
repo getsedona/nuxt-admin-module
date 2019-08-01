@@ -14,7 +14,7 @@ Is used global event bus `this.$admin`
 
 * `~/components/blocks` – directory for blocks. Subdirectories not supported yet
 
-### Create new block
+### Create a new block
 
 A block is a vue component (vue or js file).
 
