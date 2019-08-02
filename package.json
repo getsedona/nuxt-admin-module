@@ -30,7 +30,8 @@
     "ajv": "^6.10.2",
     "lodash": "^4.17.15",
     "nanoid": "^2.0.3",
-    "quasar": "^1.0.5"
+    "quasar": "^1.0.5",
+    "vuedraggable": "^2.23.0"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
