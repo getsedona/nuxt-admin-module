@@ -1,8 +1,6 @@
 <template>
   <div>
-    Text block
-    <br>
-    {{ text }}
+    Text block says: {{ text }}
   </div>
 </template>
 

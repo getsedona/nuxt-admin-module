@@ -2,7 +2,7 @@
   <main class="main">
     <the-header />
     <the-blocks
-      :blocks="blocks"
+      :blocks="page.blocks"
     />
   </main>
 </template>
@@ -10,10 +10,6 @@
 <script>
   import { TheBlocks } from '../..'
   import TheHeader from '~/components/the-header'
-
-  const blocks = [
-    { component: 'TextBlock', props: { text: 'Text' } },
-  ]
 
   export default {
     name: 'HomePage',
@@ -23,7 +19,13 @@
     },
     data() {
       return {
-        blocks,
+        page: {},
+      }
+    },
+    async asyncData({ app }) {
+      const page = await app.$axios.$get('/pages/index.json')
+      return {
+        page,
       }
     },
   }
