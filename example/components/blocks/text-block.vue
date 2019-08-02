@@ -10,6 +10,11 @@
   export const meta = {
     title: 'Text',
     description: 'Block for rendering text',
+    props: {
+      text: {
+        type: 'text',
+      },
+    },
   }
 
   export default {
