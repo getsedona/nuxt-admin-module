@@ -8,7 +8,7 @@
   import { blockMixin } from '../../..'
 
   export const meta = {
-    title: 'Teaser',
+    title: 'Teaser block',
     description: 'Teaser block',
     group: 'images',
     icon: 'image',
