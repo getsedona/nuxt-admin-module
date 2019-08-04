@@ -66,6 +66,7 @@
     "postcss-prefixwrap": "^1.6.0",
     "sedona-components": "^4.9.4",
     "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2",
     "vue-jest": "^3.0.4"
   }
 }
