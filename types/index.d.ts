@@ -24,3 +24,8 @@ export interface BlockMeta {
   icon?: string // default is 'extension'
   group?: string // default is 'general'
 }
+
+export interface FormField {
+  label?: string
+  name: string
+}
