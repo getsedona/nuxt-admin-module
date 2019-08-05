@@ -9223,3 +9223,6 @@ body.desktop .q-focusable:focus > .q-focus-helper, body.desktop .q-manual-focusa
 .admin-panel .no-move {
   transition: transform 0s;
 }
+.admin-panel input, .admin-panel textarea {
+  font-size: 14px;
+}
