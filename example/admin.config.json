@@ -15,7 +15,7 @@
           "title": "Edit Post",
           "icon": "edit",
           "type": "item",
-          "component": "path-to-component"
+          "component": "components/post-blocks"
         },
         {
           "title": "SEO",
