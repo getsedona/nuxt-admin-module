@@ -1,21 +1,41 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
-  "required": [
-    "title"
-  ],
   "properties": {
-    "title": {
-      "type": "string",
-      "description": "Admin Panel Title",
-      "default": "Admin"
-    },
     "items": {
       "type": "array",
       "description": "Admin Menu Items",
       "default": [],
       "items": {
         "$ref": "#/definitions/menuItem"
+      }
+    },
+    "toolbar": {
+      "description": "Top toolbar settings",
+      "properties": {
+        "showHome": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show home button"
+        },
+        "showHide": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show hide button"
+        },
+        "title": {
+          "type": "string",
+          "description": "Admin Panel Title",
+          "default": "Admin"
+        },
+        "buttons": {
+          "type": "array",
+          "description": "Top toolbar buttons",
+          "default": [],
+          "items": {
+            "$ref": "#/definitions/actionButton"
+          }
+        }
       }
     }
   },
@@ -85,6 +105,24 @@
               "$ref": "#/definitions/menuItem"
             }
           }
+        }
+      }
+    },
+    "actionButton": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Button title"
+        },
+        "icon": {
+          "type": "string",
+          "description": "Button icon",
+          "default": "extension"
+        },
+        "component": {
+          "type": "string",
+          "description": "A component path in admin folder"
         }
       }
     }
