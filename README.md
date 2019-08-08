@@ -2,6 +2,25 @@
 
 ## Work in progress. Do not use in production
 
+## Settings
+
+### Main toolbar
+
+Main toolbar has two default button: home button and hide button. Their can be hiding via admin config.
+
+There are adding custom buttons to panel.
+Config example:
+
+```json
+    "buttons": [
+      {
+        "title": "SEO",
+        "icon": "folder",
+        "component": "components/post-seo"
+      }
+    ]
+```
+
 ## Events
 
 Is used global event bus `this.$admin`
