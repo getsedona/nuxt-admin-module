@@ -1,5 +1,15 @@
 {
-  "title": "Admin",
+  "toolbar": {
+    "showHome": true,
+    "showHide": false,
+    "buttons": [
+      {
+        "title": "SEO",
+        "icon": "folder",
+        "component": "components/post-seo"
+      }
+    ]
+  },
   "items": [
     {
       "title": "Post List",
