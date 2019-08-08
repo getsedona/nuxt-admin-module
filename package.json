@@ -33,6 +33,7 @@
     "lodash": "^4.17.15",
     "nanoid": "^2.0.3",
     "quasar": "^1.0.5",
+    "tiptap": "^1.24.1",
     "vuedraggable": "^2.23.0"
   },
   "devDependencies": {

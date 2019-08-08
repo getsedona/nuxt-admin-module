@@ -9226,3 +9226,7 @@ body.desktop .q-focusable:focus > .q-focus-helper, body.desktop .q-manual-focusa
 .admin-panel input, .admin-panel textarea {
   font-size: 14px;
 }
+.admin-panel .edit {
+  background-color: rgba(255,255,255,0.2);
+  outline-color: rgba(255,255,255,0.2) !important;
+}
