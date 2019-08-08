@@ -8,17 +8,37 @@
 
 Main toolbar has two default button: home button and hide button. Their can be hiding via admin config.
 
-There are adding custom buttons to panel.
-Config example:
+Example:
 
 ```json
-    "buttons": [
-      {
-        "title": "SEO",
-        "icon": "folder",
-        "component": "components/post-seo"
-      }
-    ]
+{
+  "showHome": true,
+  "showHide": false,
+}
+```
+
+There are adding custom buttons to panel.
+
+Example:
+
+```json
+"buttons": [
+  {
+    "title": "SEO",
+    "icon": "folder",
+    "component": "components/post-seo"
+  }
+]
+```
+
+Default config for toolbar:
+
+```json
+"toolbar": {
+  "showHome": true,
+  "showHide": false,
+  "buttons": []
+},
 ```
 
 ## Events
