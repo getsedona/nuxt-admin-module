@@ -6,7 +6,7 @@
 
 ### Main toolbar
 
-Main toolbar has two default button: home button and hide button. Their can be hiding via admin config.
+Main toolbar has two default buttons: Home button and Hide button. Their can be hiding via an admin config.
 
 Example:
 
@@ -29,6 +29,17 @@ Example:
     "component": "components/post-seo"
   }
 ]
+```
+
+
+There are adding title after Home button and custom buttons.
+
+Example:
+
+```json
+"toolbar": {
+  "title": "Admin Panel"
+},
 ```
 
 Default config for toolbar:
