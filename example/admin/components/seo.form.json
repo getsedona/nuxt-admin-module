@@ -1,0 +1,12 @@
+{
+  "fields": [
+    {
+      "name": "title",
+      "type": "text"
+    },
+    {
+      "name": "description",
+      "type": "textarea"
+    }
+  ]
+}
