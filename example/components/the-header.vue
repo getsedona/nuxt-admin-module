@@ -25,6 +25,14 @@
                   Contacts
                 </nuxt-link>
               </li>
+              <li>
+                <a
+                  href="#"
+                  @click.prevent="login"
+                >
+                  Login
+                </a>
+              </li>
             </ul>
           </nav>
         </div>
@@ -36,5 +44,10 @@
 <script>
   export default {
     name: 'TheHeader',
+    methods: {
+      login() {
+        this.$store.commit('auth/SET_LOGGED')
+      },
+    },
   }
 </script>
