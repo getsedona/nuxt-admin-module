@@ -1,6 +1,89 @@
 # Nuxt Admin Module
 
+Admin Panel for Nuxt.js sites
+
 ## Work in progress. Do not use in production
+
+## Features
+
+* Hierarchical menu
+* Data lists for content management
+* Easy configurable forms
+* Block editor
+* Inline editor
+
+## Requirements
+
+* Nuxt.js :-)
+* Vuex store
+
+## Installation
+
+```
+npm i nuxt-admin-module@git+https://git@github.com/getsedona/nuxt-admin-module.git
+```
+
+## Setup
+
+1. Register module in `nuxt.config.js`
+
+```js
+modules: ['nuxt-admin-module'],
+```
+
+2. Confire a menu
+
+2. Add `AdminPanel` component to layout
+
+```vue
+<template>
+...
+  <template v-if="loaded">
+    <no-ssr>
+      <admin-panel />
+    </no-ssr>
+  </template>
+...
+</template>
+
+<script>
+  import { mapState } from 'vuex'
+  import { AdminPanel } from 'nuxt-admin-module'
+
+  export default {
+    name: 'DefaultLayout',
+    components: {
+      AdminPanel,
+    },
+    computed: {
+      ...mapState('admin', ['loaded']),
+    },
+  }
+</script>
+```
+
+4. Add auth system. E.g. nuxt-auth
+
+5. Add login action
+
+```js
+  methods: {
+    async login() {
+      // add here a method for login
+
+      // load dependencies for admin panel (vuex modules, ui components and other)
+      await this.$store.dispatch('admin/load')
+    },
+    async logOut() {
+      // add here a method for logout
+
+      // unregister vuex modules
+      await this.$store.dispatch('admin/unload')
+    },
+  },
+```
+
+## Usage
 
 ## Settings
 

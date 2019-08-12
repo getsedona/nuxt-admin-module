@@ -1,4 +1,4 @@
-import { Component } from "vue";
+import Vue, { Component, ComponentOptions } from "vue";
 
 export interface MenuItem {
   id?: string
@@ -35,4 +35,21 @@ export interface BlockMeta {
 export interface FormField {
   label?: string
   name: string
+}
+
+export interface Admin {
+  goHome: () => void,
+  goTo: (item: MenuItem) => void,
+}
+
+declare module 'vue/types/options' {
+  interface ComponentOptions<V extends Vue> {
+    block?: BlockMeta
+  }
+}
+
+declare module 'vue/types/vue' {
+  interface Vue {
+    $admin: Admin
+  }
 }

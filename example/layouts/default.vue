@@ -4,13 +4,16 @@
       <nuxt />
     </main>
 
-    <no-ssr>
-      <admin-panel />
-    </no-ssr>
+    <template v-if="loaded">
+      <no-ssr>
+        <admin-panel />
+      </no-ssr>
+    </template>
   </div>
 </template>
 
 <script>
+  import { mapState } from 'vuex'
   // @ToDo change import to alias
   import { AdminPanel } from './../..'
 
@@ -18,6 +21,9 @@
     name: 'DefaultLayout',
     components: {
       AdminPanel,
+    },
+    computed: {
+      ...mapState('admin', ['loaded']),
     },
   }
 </script>
