@@ -3,6 +3,8 @@ const baseRoute = (env) => (env === 'GH_PAGES' ? '/nuxt-admin-module/' : '/')
 export default {
   modules: ['nuxt-admin-module', '@nuxtjs/axios'],
 
+  plugins: ['~/plugins/admin'],
+
   css: [{ src: 'sedona-components/src/index.less', lang: 'less' }],
 
   build: {

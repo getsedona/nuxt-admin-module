@@ -4,7 +4,7 @@
       <nuxt />
     </main>
 
-    <template v-if="loggedIn">
+    <template v-if="loaded">
       <no-ssr>
         <admin-panel />
       </no-ssr>
@@ -23,7 +23,7 @@
       AdminPanel,
     },
     computed: {
-      ...mapState('auth', ['loggedIn']),
+      ...mapState('admin', ['loaded']),
     },
   }
 </script>
