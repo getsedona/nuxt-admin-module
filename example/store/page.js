@@ -15,9 +15,7 @@ export const actions = {
     const page = await this.$axios.$get(`/api/page/${slug}.json`)
     commit('SET_PAGE', { slug, page })
   },
-  async save() {
-
-  },
+  async save() {},
 }
 
 export const mutations = {
@@ -39,5 +37,16 @@ export const mutations = {
       throw new Error(`No block found with id ${id} in page ${slug}`)
     }
     state.items[slug].content.splice(index, 1)
+  },
+  UPDATE_BLOCK_PARAMS(state, { slug, id, params = {} }) {
+    if (state.items[slug] === undefined) {
+      throw new Error(`No page found with slug ${slug}`)
+    }
+    const blockIndex = state.items[slug].content.findIndex((item) => item.id === id)
+    if (blockIndex === undefined) {
+      throw new Error(`No block found with id ${id} in page ${slug}`)
+    }
+    const props = state.items[slug].content[blockIndex].props || {}
+    Vue.set(state.items[slug].content[blockIndex], 'props', Object.assign({}, props, params))
   },
 }
