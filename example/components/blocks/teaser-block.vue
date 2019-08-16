@@ -13,6 +13,10 @@
     group: 'images',
     icon: 'image',
     props: {
+      caption: {
+        type: 'text',
+        default: 'default text',
+      },
       variant: {
         type: 'radio-group',
         label: 'Variants',
@@ -29,6 +33,10 @@
     name: 'TeaserBlock',
     mixins: [blockMixin],
     props: {
+      caption: {
+        type: String,
+        default: '',
+      },
       variant: {
         type: String,
         default: 'red',

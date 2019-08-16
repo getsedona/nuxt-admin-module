@@ -4,6 +4,7 @@
       :blocks="page.content"
       @add-block="addBlock"
       @remove-block="removeBlock"
+      @change-params="changeParams"
     />
   </div>
 </template>
@@ -35,6 +36,9 @@
         if (index !== undefined) {
           this.page.blocks.splice(index, 1)
         }
+      },
+      changeParams({ id, params }) {
+        console.log(id, params)
       },
     },
   }
