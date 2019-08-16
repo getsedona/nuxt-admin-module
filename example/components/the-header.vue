@@ -60,7 +60,8 @@
     methods: {
       async login() {
         await this.$store.dispatch('auth/login')
-        await this.$store.dispatch('admin/load')
+        await this.$adminLoader.load()
+        // await this.$store.dispatch('admin/load')
       },
       async logOut() {
         await this.$store.dispatch('auth/logOut')

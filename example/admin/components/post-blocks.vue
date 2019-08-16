@@ -1,9 +1,10 @@
 <template>
-  <div v-if="page.blocks">
+  <div v-if="page">
     <blocks-view
-      :blocks="page.blocks"
+      :blocks="page.content"
       @add-block="addBlock"
       @remove-block="removeBlock"
+      @change-params="changeParams"
     />
   </div>
 </template>
@@ -16,17 +17,15 @@
     components: {
       BlocksView,
     },
-    data() {
-      return {
-        page: {},
-      }
-    },
-    async created() {
-      this.page = await this.$axios.$get('/pages/index.json')
+    computed: {
+      page() {
+        return this.$store.getters['page/bySlug']('index')
+      },
     },
     methods: {
       addBlock({ id, component, props }) {
-        this.page.blocks.push({
+        this.$store.commit('page/ADD_BLOCK', {
+          slug: this.$route.name,
           id,
           component,
           props,
@@ -37,6 +36,13 @@
         if (index !== undefined) {
           this.page.blocks.splice(index, 1)
         }
+      },
+      changeParams({ id, params }) {
+        this.$store.commit('page/UPDATE_BLOCK_PARAMS', {
+          slug: this.$route.name,
+          id,
+          params,
+        })
       },
     },
   }

@@ -1,6 +1,6 @@
 {
   "page": "Home Page",
-  "blocks": [
+  "content": [
     {
       "id": "tdkjlizscl",
       "component": "TextBlock",

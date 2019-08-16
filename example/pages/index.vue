@@ -1,9 +1,12 @@
 <template>
   <main class="main">
     <the-header />
-    <the-blocks
-      :blocks="page.blocks"
-    />
+
+    <template v-if="page">
+      <the-blocks
+        :blocks="page.content"
+      />
+    </template>
   </main>
 </template>
 
@@ -17,16 +20,13 @@
       TheHeader,
       TheBlocks,
     },
-    data() {
-      return {
-        page: {},
-      }
+    computed: {
+      page() {
+        return this.$store.getters['page/bySlug']('index')
+      },
     },
-    async asyncData({ app }) {
-      const page = await app.$axios.$get('/pages/index.json')
-      return {
-        page,
-      }
+    async fetch({ store }) {
+      await store.dispatch('page/load', { slug: 'index' })
     },
   }
 </script>
