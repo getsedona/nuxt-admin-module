@@ -38,7 +38,11 @@
         }
       },
       changeParams({ id, params }) {
-        console.log(id, params)
+        this.$store.commit('page/UPDATE_BLOCK_PARAMS', {
+          slug: this.$route.name,
+          id,
+          params,
+        })
       },
     },
   }

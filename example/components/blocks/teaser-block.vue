@@ -1,6 +1,10 @@
 <template>
   <div>
     Teaser block
+    <br>
+    <b>Caption:</b> {{ caption }}
+    <br>
+    <b>Variant:</b> {{ variant }}
   </div>
 </template>
 
