@@ -24,6 +24,7 @@
       variant: {
         type: 'radio-group',
         label: 'Variants',
+        default: 'red',
         options: [
           'red',
           'blue',
