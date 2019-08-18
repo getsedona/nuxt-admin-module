@@ -60,7 +60,7 @@
     "jest": "^24.9.0",
     "jest-serializer-vue": "^2.0.2",
     "jest-transform-stub": "^2.0.0",
-    "less": "^3.10.0",
+    "less": "^3.10.1",
     "less-loader": "^5.0.0",
     "nuxt": "^2.8.1",
     "postcss": "7.0.14",

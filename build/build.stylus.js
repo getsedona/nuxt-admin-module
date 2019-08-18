@@ -15,7 +15,7 @@ generateFiles()
   .catch((error) => console.log(error))
 
 /**
- * Compile less with postcss
+ * Compile stylus with postcss
  *
  * @returns {Promise<string>} compilled css code
  */
@@ -56,9 +56,9 @@ function generateFiles() {
 }
 
 /**
- * Compilee less
+ * Compilee stylus
  *
- * @param {string} code less code
+ * @param {string} code stylus code
  * @returns {Promise<string>} css code
  */
 function compileStylus(code) {
