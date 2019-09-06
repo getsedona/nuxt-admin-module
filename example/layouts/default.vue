@@ -5,9 +5,9 @@
     </main>
 
     <template v-if="loaded">
-      <no-ssr>
+      <client-only>
         <admin-panel />
-      </no-ssr>
+      </client-only>
     </template>
   </div>
 </template>
