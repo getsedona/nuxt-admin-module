@@ -14,6 +14,9 @@
       text: {
         type: 'text',
       },
+      isDark: {
+        type: 'boolean',
+      },
     },
   }
 
