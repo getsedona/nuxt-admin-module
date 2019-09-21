@@ -15,7 +15,7 @@
     "build:example": "nuxt generate example",
     "lint": "eslint --color --ext .js,.vue .",
     "lint:fix": "eslint --fix --ext .js,.vue .",
-    "generate:gh-pages": "DEPLOY_ENV=GH_PAGES nuxt generate example",
+    "generate:gh-pages": "DEPLOY_ENV=GH_PAGES cd example && npm ci && nuxt generate",
     "deploy:gh-pages": "gh-pages -d docs -m 'chore: update example' -t"
   },
   "repository": {

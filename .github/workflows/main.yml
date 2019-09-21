@@ -1,4 +1,4 @@
-name: Node CI
+name: Build demo
 
 on: [push]
 
@@ -13,7 +13,7 @@ jobs:
       - run: npm ci
       - run: npm test
 
-  styleguide:
+  demo:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
