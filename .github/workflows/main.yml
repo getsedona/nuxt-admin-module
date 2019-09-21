@@ -22,5 +22,7 @@ jobs:
         with:
           node-version: 12
       - run: npm ci
+      - run: git config --global user.email "kalinichenko@constlab.ru"
+      - run: git config --global user.name "Ivan Kalinichenko"
       - run: npm run generate:gh-pages
       - run: npm run deploy:gh-pages
