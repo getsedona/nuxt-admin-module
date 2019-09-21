@@ -1,6 +1,6 @@
 {
   "name": "@getsedona/nuxt-admin-module",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "main": "lib/index.js",
   "files": [
@@ -11,11 +11,11 @@
   "scripts": {
     "dev": "nuxt example",
     "test": "jest",
-    "build": "node build/build.stylus.js",
+    "build": "node scripts/build.stylus.js",
     "build:example": "nuxt generate example",
     "lint": "eslint --color --ext .js,.vue .",
     "lint:fix": "eslint --fix --ext .js,.vue .",
-    "generate:gh-pages": "DEPLOY_ENV=GH_PAGES cd example && npm i && nuxt generate",
+    "generate:gh-pages": "cd example && npm i && DEPLOY_ENV=GH_PAGES nuxt generate",
     "deploy:gh-pages": "gh-pages -d docs -m 'chore: update example' -t"
   },
   "repository": {
@@ -33,7 +33,7 @@
     "lodash": "^4.17.15",
     "nanoid": "^2.1.1",
     "quasar": "^1.1.2",
-    "vuedraggable": "^2.23.0"
+    "vuedraggable": "^2.23.1"
   },
   "devDependencies": {
     "@babel/core": "^7.6.0",
