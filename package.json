@@ -8,6 +8,9 @@
     "dist",
     "types"
   ],
+  "config": {
+    "access": "public"
+  },
   "scripts": {
     "dev": "nuxt example",
     "test": "jest",
