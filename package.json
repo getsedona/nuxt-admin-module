@@ -15,9 +15,8 @@
     "build:example": "nuxt generate example",
     "lint": "eslint --color --ext .js,.vue .",
     "lint:fix": "eslint --fix --ext .js,.vue .",
-    "generate:gh-pages": "DEPLOY_ENV=GH_PAGES nuxt generate example",
-    "deploy:gh-pages": "gh-pages -d docs -m 'chore: update example' -t",
-    "publish": "clean-publish"
+    "generate:gh-pages": "DEPLOY_ENV=GH_PAGES cd example && npm i && nuxt generate",
+    "deploy:gh-pages": "gh-pages -d docs -m 'chore: update example' -t"
   },
   "repository": {
     "type": "git",
@@ -45,7 +44,6 @@
     "@vue/test-utils": "^1.0.0-beta.29",
     "babel-eslint": "^10.0.3",
     "babel-jest": "^24.9.0",
-    "clean-publish": "^1.1.2",
     "escape-regex-string": "^1.0.6",
     "eslint": "^5.16.0",
     "eslint-config-standard": "^12.0.0",
