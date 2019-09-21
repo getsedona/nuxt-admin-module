@@ -5,7 +5,7 @@
 </template>
 
 <script>
-  import { blockMixin } from '../../..'
+  import { blockMixin } from '@getsedona/nuxt-admin-module/mixins'
 
   export const meta = {
     title: 'Text',

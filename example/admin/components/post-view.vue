@@ -11,7 +11,7 @@
 
 <script>
   import get from 'lodash/get'
-  import { AdminForm } from '../../..'
+  import { AdminForm } from '@getsedona/nuxt-admin-module/components'
   import PostFormSchema from './post.form.json'
 
   export default {

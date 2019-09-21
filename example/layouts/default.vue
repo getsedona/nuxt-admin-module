@@ -14,8 +14,7 @@
 
 <script>
   import { mapState } from 'vuex'
-  // @ToDo change import to alias
-  import { AdminPanel } from './../..'
+  import { AdminPanel } from '@getsedona/nuxt-admin-module/components'
 
   export default {
     name: 'DefaultLayout',

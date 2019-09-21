@@ -10,7 +10,7 @@
 </template>
 
 <script>
-  import { BlocksView } from '../../..'
+  import { BlocksView } from '@getsedona/nuxt-admin-module/components'
 
   export default {
     name: 'PostBlocks',
