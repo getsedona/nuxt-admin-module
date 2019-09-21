@@ -11,7 +11,7 @@
 </template>
 
 <script>
-  import { TheBlocks } from '../..'
+  import { TheBlocks } from '@getsedona/nuxt-admin-module/components'
   import TheHeader from '~/components/the-header'
 
   export default {

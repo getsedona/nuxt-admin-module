@@ -8,7 +8,7 @@
 </template>
 
 <script>
-  import { AdminForm } from 'nuxt-admin-module'
+  import { AdminForm } from '@getsedona/nuxt-admin-module/components'
   import SeoFormSchema from './seo.form.json'
 
   export default {
