@@ -12,7 +12,6 @@ jobs:
           node-version: 12
       - run: npm ci
       - run: npm test
-      - run: npm run generate:gh-pages
 
   publish-demo:
     runs-on: ubuntu-latest
@@ -23,4 +22,5 @@ jobs:
         with:
           node-version: 12
       - run: npm ci
+      - run: npm run generate:gh-pages
       - run: npm run deploy:gh-pages
