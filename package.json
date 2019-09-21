@@ -11,7 +11,7 @@
   "scripts": {
     "dev": "nuxt example",
     "test": "jest",
-    "build": "node build/build.stylus.js",
+    "build": "node scripts/build.stylus.js",
     "build:example": "nuxt generate example",
     "lint": "eslint --color --ext .js,.vue .",
     "lint:fix": "eslint --fix --ext .js,.vue .",
@@ -33,7 +33,7 @@
     "lodash": "^4.17.15",
     "nanoid": "^2.1.1",
     "quasar": "^1.1.2",
-    "vuedraggable": "^2.23.0"
+    "vuedraggable": "^2.23.1"
   },
   "devDependencies": {
     "@babel/core": "^7.6.0",
