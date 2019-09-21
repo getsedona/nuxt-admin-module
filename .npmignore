@@ -1,0 +1,8 @@
+.vscode/
+.circleci/
+build/
+example/
+test/
+
+jest.config.js
+jest.setup.js
