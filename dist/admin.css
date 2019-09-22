@@ -2935,27 +2935,41 @@ body.q-ios-padding .q-layout--standard .q-footer > .q-toolbar:last-child, body.q
 .q-slide-item {
   position: relative;
 }
-.q-slide-item__left, .q-slide-item__right {
+.q-slide-item__left, .q-slide-item__right, .q-slide-item__top, .q-slide-item__bottom {
   visibility: hidden;
-  padding: 8px 16px;
   font-size: 14px;
+  color: #fff;
 }
-.q-slide-item__left .q-icon, .q-slide-item__right .q-icon {
+.q-slide-item__left .q-icon, .q-slide-item__right .q-icon, .q-slide-item__top .q-icon, .q-slide-item__bottom .q-icon {
   font-size: 1.714em;
 }
 .q-slide-item__left {
   background: #4caf50;
-  color: #fff;
+  padding: 8px 16px;
 }
 .q-slide-item__left > div {
   transform-origin: left center;
 }
 .q-slide-item__right {
   background: #ff9800;
-  color: #fff;
+  padding: 8px 16px;
 }
 .q-slide-item__right > div {
   transform-origin: right center;
+}
+.q-slide-item__top {
+  background: #2196f3;
+  padding: 16px 8px;
+}
+.q-slide-item__top > div {
+  transform-origin: top center;
+}
+.q-slide-item__bottom {
+  background: #9c27b0;
+  padding: 16px 8px;
+}
+.q-slide-item__bottom > div {
+  transform-origin: bottom center;
 }
 .q-slide-item__content {
   background: #fff;

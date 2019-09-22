@@ -20,7 +20,7 @@ Admin Panel for Nuxt.js sites
 ## Installation
 
 ```
-npm i nuxt-admin-module@git+https://git@github.com/getsedona/nuxt-admin-module.git
+npm i @getsedona/nuxt-admin-module
 ```
 
 ## Setup
@@ -28,7 +28,7 @@ npm i nuxt-admin-module@git+https://git@github.com/getsedona/nuxt-admin-module.g
 1. Register module in `nuxt.config.js`
 
 ```js
-modules: ['nuxt-admin-module'],
+modules: ['@getsedona/nuxt-admin-module'],
 ```
 
 2. Confire a menu
@@ -48,7 +48,7 @@ modules: ['nuxt-admin-module'],
 
 <script>
   import { mapState } from 'vuex'
-  import { AdminPanel } from 'nuxt-admin-module'
+  import { AdminPanel } from '@getsedona/nuxt-admin-module/components'
 
   export default {
     name: 'DefaultLayout',
@@ -64,7 +64,7 @@ modules: ['nuxt-admin-module'],
 
 4. Add auth system. E.g. nuxt-auth
 
-5. Add login action
+5. Add login method in component
 
 ```js
   methods: {
@@ -72,15 +72,25 @@ modules: ['nuxt-admin-module'],
       // add here a method for login
 
       // load dependencies for admin panel (vuex modules, ui components and other)
-      await this.$store.dispatch('admin/load')
+      await this.$adminLoader.load();
     },
     async logOut() {
       // add here a method for logout
 
       // unregister vuex modules
-      await this.$store.dispatch('admin/unload')
+      await this.$adminLoader.unload();
     },
   },
+```
+
+6. Add plugin and add check auth and login in plugin
+
+`~plugins/admin.client.js`
+
+```js
+export default async function(context) {
+  await context.$adminLoader.load();
+}
 ```
 
 ## Usage
