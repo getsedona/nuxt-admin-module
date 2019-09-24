@@ -7,15 +7,17 @@
 <script>
   import { blockMixin } from '@getsedona/nuxt-admin-module/mixins'
 
-  export const meta = {
-    title: 'Image',
-    description: 'Image block',
-    group: 'images',
-    icon: 'image',
-  }
-
   export default {
     name: 'ImageBlock',
     mixins: [blockMixin],
   }
 </script>
+
+<block>
+{
+  "title": "Image",
+  "description": "Image block",
+  "group": "images",
+  "icon": "image"
+}
+</block>

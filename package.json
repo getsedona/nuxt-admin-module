@@ -37,11 +37,16 @@
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",
+    "@babel/parser": "^7.6.2",
+    "@babel/traverse": "^7.6.2",
     "@nuxtjs/axios": "^5.6.0",
     "@nuxtjs/eslint-config": "0.0.1",
     "@types/jest": "^24.0.18",
     "@types/lodash": "^4.14.139",
+    "@vue/component-compiler": "^4.0.0",
+    "@vue/component-compiler-utils": "^3.0.0",
     "@vue/test-utils": "^1.0.0-beta.29",
+    "acorn": "^7.1.0",
     "babel-eslint": "^10.0.3",
     "babel-jest": "^24.9.0",
     "escape-regex-string": "^1.0.6",
@@ -69,6 +74,7 @@
     "sedona-components": "^4.9.8",
     "stylus": "^0.54.7",
     "stylus-loader": "^3.0.2",
-    "vue-jest": "^3.0.5"
+    "vue-jest": "^3.0.5",
+    "vue-template-compiler": "^2.6.10"
   }
 }

@@ -1,8 +1,6 @@
 <template>
-  <div>
-    <main style="padding-left:350px">
-      <nuxt />
-    </main>
+  <div style="padding-left:350px">
+    <nuxt />
 
     <template v-if="loaded">
       <client-only>
@@ -14,13 +12,9 @@
 
 <script>
   import { mapState } from 'vuex'
-  import { AdminPanel } from '@getsedona/nuxt-admin-module/components'
 
   export default {
     name: 'DefaultLayout',
-    components: {
-      AdminPanel,
-    },
     computed: {
       ...mapState('admin', ['loaded']),
     },
