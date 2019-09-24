@@ -6,7 +6,7 @@ Admin Panel for Nuxt.js sites
 
 ## Features
 
-* Hierarchical menu
+* Configurable hierarchical menu
 * Data lists for content management
 * Easy configurable forms
 * Block editor
@@ -39,22 +39,18 @@ modules: ['@getsedona/nuxt-admin-module'],
 <template>
 ...
   <template v-if="loaded">
-    <no-ssr>
+    <client-only>
       <admin-panel />
-    </no-ssr>
+    </client-only>
   </template>
 ...
 </template>
 
 <script>
   import { mapState } from 'vuex'
-  import { AdminPanel } from '@getsedona/nuxt-admin-module/components'
 
   export default {
     name: 'DefaultLayout',
-    components: {
-      AdminPanel,
-    },
     computed: {
       ...mapState('admin', ['loaded']),
     },
