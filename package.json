@@ -70,7 +70,7 @@
     "nuxt": "^2.9.2",
     "postcss": "7.0.14",
     "postcss-csso": "^3.0.0",
-    "postcss-prefixwrap": "^1.6.0",
+    "postcss-prefixwrap": "^1.7.0",
     "sedona-components": "^4.9.8",
     "stylus": "^0.54.7",
     "stylus-loader": "^3.0.2",
