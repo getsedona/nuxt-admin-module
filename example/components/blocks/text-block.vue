@@ -5,7 +5,7 @@
 </template>
 
 <script>
-  import { blockMixin } from '@getsedona/nuxt-admin-module/mixins'
+  import { blockMixin } from '@getsedona/nuxt-admin-module/lib/mixins'
 
   export default {
     name: 'TextBlock',

@@ -2,16 +2,16 @@
   <main class="main">
     <the-header />
 
-    <!-- <template v-if="page">
+    <template v-if="page">
       <the-blocks
         :blocks="page.content"
       />
-    </template> -->
+    </template>
   </main>
 </template>
 
 <script>
-  // import { TheBlocks } from '@getsedona/nuxt-admin-module/lib/components/blocks'
+  // import { TheBlocks } from '@getsedona/nuxt-admin-module/components'
   import TheHeader from '~/components/the-header'
 
   export default {

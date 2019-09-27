@@ -1,8 +1,6 @@
 const baseRoute = (env) => (env === 'GH_PAGES' ? '/nuxt-admin-module/' : '/')
 
 export default {
-  // mode: 'spa',
-
   modules: ['@getsedona/nuxt-admin-module', '@nuxtjs/axios'],
 
   plugins: ['~/plugins/admin'],
