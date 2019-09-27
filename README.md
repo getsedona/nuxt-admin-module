@@ -33,34 +33,9 @@ modules: ['@getsedona/nuxt-admin-module'],
 
 2. Confire a menu
 
-2. Add `AdminPanel` component to layout
+3. Add auth system. E.g. nuxt-auth
 
-```vue
-<template>
-...
-  <template v-if="loaded">
-    <client-only>
-      <admin-panel />
-    </client-only>
-  </template>
-...
-</template>
-
-<script>
-  import { mapState } from 'vuex'
-
-  export default {
-    name: 'DefaultLayout',
-    computed: {
-      ...mapState('admin', ['loaded']),
-    },
-  }
-</script>
-```
-
-4. Add auth system. E.g. nuxt-auth
-
-5. Add login method in component
+4. Add login method in component
 
 ```js
   methods: {
@@ -79,7 +54,7 @@ modules: ['@getsedona/nuxt-admin-module'],
   },
 ```
 
-6. Add plugin and add check auth and login in plugin
+5. Add plugin and add check auth and login in plugin
 
 `~plugins/admin.client.js`
 

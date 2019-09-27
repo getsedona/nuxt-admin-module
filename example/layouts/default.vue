@@ -1,12 +1,6 @@
 <template>
   <div style="padding-left:350px">
     <nuxt />
-
-    <template v-if="loaded">
-      <client-only>
-        <admin-panel />
-      </client-only>
-    </template>
   </div>
 </template>
 
