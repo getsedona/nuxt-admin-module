@@ -11,14 +11,14 @@
 </template>
 
 <script>
-  import { TheBlocks } from '@getsedona/nuxt-admin-module/components'
+  // import { TheBlocks } from '@getsedona/nuxt-admin-module/components'
   import TheHeader from '~/components/the-header'
 
   export default {
     name: 'HomePage',
     components: {
       TheHeader,
-      TheBlocks,
+      // TheBlocks,
     },
     computed: {
       page() {

@@ -1,6 +1,6 @@
 <template>
   <div>
-    Image block
+    Feature B~lock
   </div>
 </template>
 
@@ -8,16 +8,13 @@
   import { blockMixin } from '@getsedona/nuxt-admin-module/lib/mixins'
 
   export default {
-    name: 'ImageBlock',
+    name: 'FeatureBlock',
     mixins: [blockMixin],
+    props: {
+      text: {
+        type: String,
+        default: 'AA',
+      },
+    },
   }
 </script>
-
-<block>
-{
-  "title": "Image",
-  "description": "Image block",
-  "group": "images",
-  "icon": "image"
-}
-</block>

@@ -21,5 +21,8 @@
       "url": "./lib/schema/form.schema.json"
     }
   ],
-  "editor.formatOnSave": false
+  "editor.formatOnSave": false,
+   "vetur.grammar.customBlocks": {
+    "block": "json"
+  }
 }

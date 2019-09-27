@@ -9,30 +9,7 @@
 </template>
 
 <script>
-  import { blockMixin } from '@getsedona/nuxt-admin-module/mixins'
-
-  export const meta = {
-    title: 'Teaser block',
-    description: 'Teaser block',
-    group: 'images',
-    icon: 'image',
-    props: {
-      caption: {
-        type: 'text',
-        default: 'default text',
-      },
-      variant: {
-        type: 'radio-group',
-        label: 'Variants',
-        default: 'red',
-        options: [
-          'red',
-          'blue',
-          { label: 'Green variant', value: 'green' },
-        ],
-      },
-    },
-  }
+  import { blockMixin } from '@getsedona/nuxt-admin-module/lib/mixins'
 
   export default {
     name: 'TeaserBlock',
@@ -49,3 +26,27 @@
     },
   }
 </script>
+
+<block>
+{
+  "title": "Teaser block",
+  "description": "Teaser block",
+  "icon": "image",
+  "props": {
+    "caption": {
+      "type": "text",
+      "default": "default text"
+    },
+    "variant": {
+      "type": "radio-group",
+      "label": "Variants",
+      "default": "red",
+      "options": [
+        "red",
+        "blue",
+        { "label": "Green variant", "value": "green" }
+      ]
+    }
+  }
+}
+</block>

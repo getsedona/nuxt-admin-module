@@ -5,20 +5,7 @@
 </template>
 
 <script>
-  import { blockMixin } from '@getsedona/nuxt-admin-module/mixins'
-
-  export const meta = {
-    title: 'Text',
-    description: 'Block for rendering text',
-    props: {
-      text: {
-        type: 'text',
-      },
-      isDark: {
-        type: 'boolean',
-      },
-    },
-  }
+  import { blockMixin } from '@getsedona/nuxt-admin-module/lib/mixins'
 
   export default {
     name: 'TextBlock',
@@ -31,3 +18,18 @@
     },
   }
 </script>
+
+<block>
+{
+  "title": "Text",
+  "description": "Block for rendering text",
+  "props": {
+    "text": {
+      "type": "text"
+    },
+    "isDark": {
+      "type": "checkbox"
+    }
+  }
+}
+</block>
