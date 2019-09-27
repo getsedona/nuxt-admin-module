@@ -1,12 +1,13 @@
 {
   "name": "@getsedona/nuxt-admin-module",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "",
   "main": "lib/index.js",
   "files": [
     "lib",
     "dist",
-    "types"
+    "types",
+    "components.js"
   ],
   "scripts": {
     "dev": "nuxt example",
