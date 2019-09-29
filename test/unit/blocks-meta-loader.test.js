@@ -11,6 +11,10 @@ const blocks = [
         type: 'text',
         default: '',
       },
+      isDark: {
+        type: 'checkbox',
+        default: false,
+      },
     },
   },
 ]

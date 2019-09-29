@@ -14,6 +14,7 @@
         type: String,
         default: '',
       },
+      isDark: Boolean,
     },
   }
 </script>
