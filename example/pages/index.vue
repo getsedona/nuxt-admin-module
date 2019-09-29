@@ -2,23 +2,17 @@
   <main class="main">
     <the-header />
 
-    <template v-if="page">
-      <the-blocks
-        :blocks="page.content"
-      />
-    </template>
+    <the-blocks :blocks="page.content || []" />
   </main>
 </template>
 
 <script>
-  // import { TheBlocks } from '@getsedona/nuxt-admin-module/components'
   import TheHeader from '~/components/the-header'
 
   export default {
     name: 'HomePage',
     components: {
       TheHeader,
-      // TheBlocks,
     },
     computed: {
       page() {
