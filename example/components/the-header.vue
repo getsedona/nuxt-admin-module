@@ -5,7 +5,7 @@
         <div class="header__fold">
           <ul class="header__menu">
             <li>
-              <nuxt-link to="/">
+              <nuxt-link :to="{ path: '/', query: { loggedIn } }">
                 Example Site
               </nuxt-link>
             </li>
@@ -16,12 +16,12 @@
           <nav class="header__nav">
             <ul class="header__menu">
               <li>
-                <nuxt-link to="/blog">
+                <nuxt-link :to="{ path: '/blog', query: { loggedIn } }">
                   Blog
                 </nuxt-link>
               </li>
               <li>
-                <nuxt-link to="/contact">
+                <nuxt-link :to="{ path: '/contact', query: { loggedIn } }">
                   Contacts
                 </nuxt-link>
               </li>
