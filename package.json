@@ -11,7 +11,9 @@
   ],
   "scripts": {
     "dev": "nuxt example",
-    "test": "jest",
+    "test": "npm run test:components && npm run test:unit",
+    "test:components": "jest --rootDir . --config test/jest.components.config.js",
+    "test:unit": "jest --rootDir . --config test/jest.unit.config.js",
     "build": "node scripts/build.stylus.js",
     "build:example": "nuxt generate example",
     "lint": "eslint --color --ext .js,.vue .",
