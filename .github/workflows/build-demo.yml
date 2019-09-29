@@ -10,6 +10,9 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12
-      - run: npm ci
-      - run: cd example && npm i
-      - run: npm run build:example
+      - uses: JamesIves/github-pages-deploy-action@master
+        env:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: 'dist-docs'
+          BUILD_SCRIPT: npm ci && npm run build:example

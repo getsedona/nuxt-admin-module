@@ -31,6 +31,6 @@ export default {
   },
 
   generate: {
-    dir: './../docs',
+    dir: './../dist-docs',
   },
 }
