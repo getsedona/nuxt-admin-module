@@ -3,7 +3,7 @@ name: Build Demo
 on: [push]
 
 jobs:
-  test:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
@@ -11,4 +11,5 @@ jobs:
         with:
           node-version: 12
       - run: npm ci
+      - run: cd example && npm i
       - run: npm run build:example
