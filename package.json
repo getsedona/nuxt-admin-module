@@ -15,11 +15,8 @@
     "test:components": "jest --rootDir . --config test/jest.components.config.js",
     "test:unit": "jest --rootDir . --config test/jest.unit.config.js",
     "build": "node scripts/build.stylus.js",
-    "build:example": "cd example && npm i && cd ../ && nuxt generate example",
-    "lint": "eslint --color --ext .js,.vue .",
-    "lint:fix": "eslint --fix --ext .js,.vue .",
-    "generate:gh-pages": "cd example && npm i && DEPLOY_ENV=GH_PAGES nuxt generate",
-    "deploy:gh-pages": "gh-pages -d docs -m 'chore: update example' -t"
+    "build:example": "bash scripts/build.example.sh",
+    "lint": "eslint --color --fix --ext .js,.vue ."
   },
   "repository": {
     "type": "git",
@@ -64,12 +61,12 @@
     "eslint-plugin-standard": "^4.0.1",
     "eslint-plugin-unicorn": "^8.0.2",
     "eslint-plugin-vue": "^5.2.3",
-    "gh-pages": "2.0.1",
     "jest": "^24.9.0",
     "jest-serializer-vue": "^2.0.2",
     "jest-transform-stub": "^2.0.0",
     "less": "^3.10.3",
     "less-loader": "^5.0.0",
+    "node-static": "^0.7.11",
     "nuxt": "^2.9.2",
     "postcss": "7.0.14",
     "postcss-csso": "^3.0.0",
