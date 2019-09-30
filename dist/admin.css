@@ -410,6 +410,7 @@ a.q-btn {
 }
 .q-btn-group--stretch {
   align-self: stretch;
+  border-radius: 0;
 }
 .q-btn-group--glossy > .q-btn-item {
   background-image: linear-gradient(to bottom, rgba(255,255,255,0.3), rgba(255,255,255,0) 50%, rgba(0,0,0,0.12) 51%, rgba(0,0,0,0.04)) !important;
@@ -3972,7 +3973,7 @@ body.desktop .q-slider.q-slider--editable:hover .q-slider__pin {
 .q-table__progress {
   height: 0 !important;
 }
-.q-table__progress td {
+.q-table__progress th {
   padding: 0 !important;
   border-bottom: 1px solid transparent !important;
 }
@@ -4027,7 +4028,7 @@ body.desktop .q-slider.q-slider--editable:hover .q-slider__pin {
 .q-table--square {
   border-radius: 0;
 }
-.q-table__linear-progress, .q-table--grid .q-table__middle {
+.q-table__linear-progress {
   height: 2px;
 }
 .q-table--no-wrap th, .q-table--no-wrap td {
@@ -4036,14 +4037,21 @@ body.desktop .q-slider.q-slider--editable:hover .q-slider__pin {
 .q-table--grid {
   box-shadow: none;
 }
+.q-table--grid .q-table__top {
+  padding-bottom: 4px;
+}
+.q-table--grid .q-table__middle {
+  min-height: 2px;
+  margin-bottom: 4px;
+}
+.q-table--grid .q-table__middle thead, .q-table--grid .q-table__middle thead th {
+  border: 0 !important;
+}
+.q-table--grid .q-table__linear-progress {
+  bottom: 0;
+}
 .q-table--grid .q-table__bottom {
   border-top: 0;
-}
-.q-table--grid .q-table {
-  height: 2px;
-}
-.q-table--grid .q-table thead {
-  border: 0;
 }
 .q-table__grid-item-card {
   vertical-align: top;
