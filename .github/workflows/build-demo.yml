@@ -1,9 +1,6 @@
 name: Build Demo
 
 on:
-  pull_request:
-    branches:
-      - master
   push:
     branches:
       - master
