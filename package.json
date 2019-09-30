@@ -15,7 +15,7 @@
     "test:components": "jest --rootDir . --config test/jest.components.config.js",
     "test:unit": "jest --rootDir . --config test/jest.unit.config.js",
     "build": "node scripts/build.stylus.js",
-    "build:example": "bash scripts/build.example.sh",
+    "build:example": "npx nuxt build --spa example",
     "lint": "eslint --color --fix --ext .js,.vue ."
   },
   "repository": {
@@ -32,7 +32,7 @@
     "ajv": "^6.10.2",
     "lodash": "^4.17.15",
     "nanoid": "^2.1.1",
-    "quasar": "^1.1.5",
+    "quasar": "^1.1.6",
     "vuedraggable": "^2.23.1"
   },
   "devDependencies": {
