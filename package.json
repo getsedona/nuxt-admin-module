@@ -15,7 +15,7 @@
     "test:components": "jest --rootDir . --config test/jest.components.config.js",
     "test:unit": "jest --rootDir . --config test/jest.unit.config.js",
     "build": "node scripts/build.stylus.js",
-    "build:example": "cd example && npm i && cd ../ && GH_PAGES=true npx nuxt build --spa example",
+    "build:example": "cd example && npm i && cd ../ && DEPLOY_ENV=GH_PAGES npx nuxt build --spa example",
     "lint": "eslint --color --fix --ext .js,.vue ."
   },
   "repository": {
