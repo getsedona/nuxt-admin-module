@@ -33,4 +33,8 @@ export default {
   generate: {
     dir: './../dist-docs',
   },
+
+  axios: {
+    baseURL: process.env.DEPLOY_ENV === 'GH_PAGES' ? 'https://getsedona.github.io/nuxt-admin-module' : 'http://localhost:3000',
+  },
 }
