@@ -1,16 +1,6 @@
 {
   "eslint.alwaysShowStatus": true,
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    {
-      "language": "vue",
-      "autoFix": true
-    }
-  ],
   "javascript.preferences.quoteStyle": "single",
-  "prettier.stylelintIntegration": true,
-  "prettier.eslintIntegration": true,
   "json.schemas": [
     {
       "fileMatch": ["admin.config.json"],

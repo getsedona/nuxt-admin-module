@@ -4,6 +4,7 @@ module.exports = {
     browser: true,
     es6: true,
     jest: true,
+    node: true,
   },
   parserOptions: {
     ecmaVersion: 2019,
@@ -14,11 +15,9 @@ module.exports = {
     page: true,
     browser: true,
     context: true,
-    jestPuppeteer: true,
   },
   extends: [
     'eslint:recommended',
-    '@nuxtjs',
     'plugin:vue/base',
     'plugin:vue/essential',
     'plugin:vue/strongly-recommended',
@@ -41,7 +40,7 @@ module.exports = {
     ],
     'arrow-parens': ['error', 'always'],
     semi: ['error', 'never'],
-    indent: [
+    /* indent: [
       'error',
       2,
       {
@@ -57,7 +56,7 @@ module.exports = {
         ImportDeclaration: 1,
         flatTernaryExpressions: false,
       },
-    ],
+    ], */
     'space-before-function-paren': [
       'error',
       {
