@@ -29,6 +29,7 @@ function main() {
           /\.platform-ios(.+)/,
           /\.platform-android(.+)/,
           /\.q-(.+)/,
+          /\.q-focus-helper(.+)/,
           /(\.fullscreen|\.absolute-full|\.fixed-full)/,
           /\.no-pointer-events/,
           /(.+)#q-app(.+)/,
@@ -42,12 +43,16 @@ function main() {
           'body.platform-ios.within-iframe, body.platform-ios.within-iframe #q-app': '*',
           'body.electron .q-electron-drag': '*',
           'body.electron .q-electron-drag .q-btn-item, body.electron .q-electron-drag--exception': '*',
+          '.admin-panel code, .admin-panel kbd, .admin-panel pre, .admin-panel samp': '*',
+          '.admin-panel hr': '*',
+          '.admin-panel button, .admin-panel input, .admin-panel optgroup, .admin-panel select, .admin-panel textarea': '*',
+          '.admin-panel optgroup': '*',
         },
       }),
     ])
       .process(code, { from: sourceFile, to: 'dist/quasar.css' })
       .then((result) => {
-        const css = result.css.replace(/body\.desktop/g, '.admin-panel')
+        const css = result.css.replace(/body\.desktop/g, 'body')
 
         fs.writeFile('lib/assets/css/quasar.css', css, () => {
           console.log('Result:', path.resolve(__dirname, '../lib/assets/css/quasar.css'))
