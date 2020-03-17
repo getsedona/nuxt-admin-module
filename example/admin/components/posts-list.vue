@@ -14,7 +14,7 @@
 
 <script>
   import truncate from 'lodash/truncate'
-  import { AdminList } from '@getsedona/nuxt-admin-module/components'
+  import { AdminList } from '../../../components'
 
   export default {
     name: 'Posts',
