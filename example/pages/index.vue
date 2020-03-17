@@ -14,13 +14,13 @@
     components: {
       TheHeader,
     },
+    async fetch({ store }) {
+      await store.dispatch('page/load', { slug: 'index' })
+    },
     computed: {
       page() {
         return this.$store.getters['page/bySlug']('index')
       },
-    },
-    async fetch({ store }) {
-      await store.dispatch('page/load', { slug: 'index' })
     },
   }
 </script>

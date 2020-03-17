@@ -10,7 +10,7 @@
 </template>
 
 <script>
-  import { BlocksView } from '@getsedona/nuxt-admin-module/components'
+  import { BlocksView } from '../../../components'
 
   export default {
     name: 'PostBlocks',
@@ -19,7 +19,7 @@
     },
     computed: {
       page() {
-        return this.$store.getters['page/bySlug']('index')
+        return this.$store.getters['page/bySlug'](this.$route.name)
       },
     },
     methods: {

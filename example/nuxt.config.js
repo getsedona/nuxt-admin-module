@@ -1,7 +1,7 @@
 const baseRoute = (env) => (env === 'GH_PAGES' ? '/nuxt-admin-module/' : '/')
 
 export default {
-  modules: ['@getsedona/nuxt-admin-module', '@nuxtjs/axios'],
+  modules: ['../lib/module.js', '@nuxtjs/axios'],
 
   plugins: ['~/plugins/admin'],
 
