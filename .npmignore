@@ -1,6 +1,6 @@
 .vscode/
 .circleci/
-build/
+buildQuasar/
 example/
 test/
 
