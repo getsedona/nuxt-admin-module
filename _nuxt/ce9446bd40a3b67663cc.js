@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[7],{264:function(e){e.exports=JSON.parse('{"fields":[{"name":"title","type":"text"},{"name":"description","type":"textarea"}]}')}}]);
